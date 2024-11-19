@@ -27,3 +27,18 @@ export const getSummary = async () => {
     return null;
   }
 };
+
+export const getExperiences = async () => {
+  try {
+    const res = await fetch('http://localhost:3000/api/experiences');
+
+    if (!res.ok) {
+      throw new Error('Failed to fetch data');
+    }
+
+    return res.json();
+  } catch (error) {
+    console.log(error);
+    return null;
+  }
+};

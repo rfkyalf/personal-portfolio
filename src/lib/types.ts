@@ -14,3 +14,12 @@ export type ProjectsProps = {
     }
   ];
 };
+
+export type ExperiencesProps = {
+  id: number;
+  company: string;
+  image: string;
+  role: string;
+  status: string;
+  date: string;
+};

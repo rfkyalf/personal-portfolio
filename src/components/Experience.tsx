@@ -1,37 +1,69 @@
 import Image from 'next/image';
 import { SectionTitle, SectionWrapper } from '../components/SectionComps';
+import { GoArrowUpRight } from 'react-icons/go';
+import { getExperiences } from '@/lib/actions';
+import { ExperiencesProps } from '@/lib/types';
 
-export default function Experience() {
+export default async function Experience() {
+  const experience = await getExperiences();
+
   return (
     <SectionWrapper>
       <SectionTitle title="Experience" />
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2 md:gap-4">
-        {Array.from({ length: 3 }).map((_, i) => (
+        {experience.data?.map((exp: ExperiencesProps) => (
           <div
-            key={i}
+            key={exp.id}
             className="flex items-start gap-x-4 border border-neutral-300 shadow rounded-lg p-4"
           >
             <Image
-              src="/exp/exp1.webp"
-              alt="PT. Quadra Karya Santosa"
+              src={exp.image}
+              alt={exp.company}
               width={100}
               height={100}
-              className="size-14 object-contain"
+              className="size-12 md:size-14 object-contain"
             />
             <div>
               <h2 className="text-[0.9rem] md:text-[1rem] font-semibold text-neutral-900">
-                PT. Quadra Karya Santosa
+                {exp.company}
               </h2>
               <p className="text-[0.8rem] md:text-[0.9rem] text-neutral-700">
-                Frontend Web Developer (Intern)
+                {exp.role} &nbsp; ({exp.status})
               </p>
               <p className="text-[0.8rem] md:text-[0.9rem] text-neutral-900 mt-2 md:mt-3 lg:mt-4">
-                Sep 2023 - Nov 2023
+                {exp.date}
               </p>
             </div>
           </div>
         ))}
+        <OpenToWork />
       </div>
     </SectionWrapper>
   );
 }
+
+const OpenToWork = () => {
+  return (
+    <div className="flex items-start gap-x-4 border border-neutral-300 shadow rounded-lg p-4 ">
+      <Image
+        src="/exp/job-search.webp"
+        alt="Open to Work"
+        width={100}
+        height={100}
+        className="size-12 md:size-14 object-contain"
+      />
+      <div className="flex flex-col">
+        <h2 className="text-[0.9rem] md:text-[1rem] font-semibold text-neutral-900">
+          Open to Work
+        </h2>
+        <p className="text-[0.8rem] md:text-[0.9rem] text-neutral-700">
+          Ready to contribute as a Frontend Developer
+        </p>
+        <button className="w-fit flex items-start self-end bg-neutral-900 text-[0.8rem] md:text-[0.9rem] text-neutral-100 py-[2px] pl-8 pr-7 rounded-md">
+          Hire Me
+          <GoArrowUpRight className="size-3 text-neutral-300" />
+        </button>
+      </div>
+    </div>
+  );
+};

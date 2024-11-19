@@ -1,6 +1,9 @@
 export const getProjects = async () => {
   try {
-    const res = await fetch('http://localhost:3000/api/projects');
+    const res = await fetch('http://localhost:3000/api/projects', {
+      cache: 'force-cache',
+      next: { revalidate: 100000 },
+    });
 
     if (!res.ok) {
       throw new Error('Failed to fetch data');
@@ -15,7 +18,10 @@ export const getProjects = async () => {
 
 export const getSummary = async () => {
   try {
-    const res = await fetch('http://localhost:3000/api/summary');
+    const res = await fetch('http://localhost:3000/api/summary', {
+      cache: 'force-cache',
+      next: { revalidate: 100000 },
+    });
 
     if (!res.ok) {
       throw new Error('Failed to fetch data');
@@ -30,7 +36,10 @@ export const getSummary = async () => {
 
 export const getExperiences = async () => {
   try {
-    const res = await fetch('http://localhost:3000/api/experiences');
+    const res = await fetch('http://localhost:3000/api/experiences', {
+      cache: 'force-cache',
+      next: { revalidate: 100000 },
+    });
 
     if (!res.ok) {
       throw new Error('Failed to fetch data');
@@ -45,7 +54,10 @@ export const getExperiences = async () => {
 
 export const getSkills = async () => {
   try {
-    const res = await fetch('http://localhost:3000/api/skills');
+    const res = await fetch('http://localhost:3000/api/skills', {
+      cache: 'force-cache',
+      next: { revalidate: 100000 },
+    });
 
     if (!res.ok) {
       throw new Error('Failed to fetch data');

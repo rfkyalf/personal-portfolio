@@ -5,13 +5,13 @@ import { getExperiences } from '@/lib/actions';
 import { ExperiencesProps } from '@/lib/types';
 
 export default async function Experience() {
-  const experience = await getExperiences();
+  const experiences = await getExperiences();
 
   return (
     <SectionWrapper>
       <SectionTitle title="Experience" />
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2 md:gap-4">
-        {experience.data?.map((exp: ExperiencesProps) => (
+        {experiences.data?.map((exp: ExperiencesProps) => (
           <div
             key={exp.id}
             className="flex items-start gap-x-4 border border-neutral-300 shadow rounded-lg p-4"

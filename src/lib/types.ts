@@ -23,3 +23,9 @@ export type ExperiencesProps = {
   status: string;
   date: string;
 };
+
+export type SkillsProps = {
+  id: number;
+  name: string;
+  image: string;
+};

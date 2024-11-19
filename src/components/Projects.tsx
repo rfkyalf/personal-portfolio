@@ -36,6 +36,7 @@ export default async function Projects() {
                   key={tech.id}
                   src={tech.image}
                   alt={tech.name}
+                  title={tech.name}
                   height={50}
                   width={50}
                   className="size-5 object-cover"

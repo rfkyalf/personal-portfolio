@@ -29,6 +29,11 @@ export const dataProjects = [
         name: 'Typescript',
         image: '/tech/ts.webp',
       },
+      {
+        id: 5,
+        name: 'Framer Motion',
+        image: '/tech/framer.webp',
+      },
     ],
   },
   {
@@ -60,6 +65,11 @@ export const dataProjects = [
         id: 4,
         name: 'Typescript',
         image: '/tech/ts.webp',
+      },
+      {
+        id: 5,
+        name: 'Framer Motion',
+        image: '/tech/framer.webp',
       },
     ],
   },
@@ -98,6 +108,11 @@ export const dataProjects = [
         name: 'React Query',
         image: '/tech/react-query.webp',
       },
+      {
+        id: 6,
+        name: 'Framer Motion',
+        image: '/tech/framer.webp',
+      },
     ],
   },
   {
@@ -129,6 +144,11 @@ export const dataProjects = [
         id: 4,
         name: 'React Query',
         image: '/tech/react-query.webp',
+      },
+      {
+        id: 5,
+        name: 'Zustand',
+        image: '/tech/zustand.webp',
       },
     ],
   },

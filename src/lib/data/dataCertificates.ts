@@ -69,7 +69,7 @@ export const dataCertificates = [
     id: 4,
     title: 'Bootstrap CSS: Pemula sampai Mahir',
     image: '/certif/certif4.webp',
-    date: 'Aug 2024 - Aug 2027',
+    date: 'Aug 2024',
     company: 'Udemy',
     url: 'https://udemy-certificate.s3.amazonaws.com/image/UC-ef1e6864-a683-4850-8962-e20b9400caab.jpg?v=1723422970000',
     skills: [

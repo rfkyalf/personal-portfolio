@@ -10,8 +10,6 @@ export default function Navbar() {
     setIsOpen(!isOpen);
   };
 
-  console.log(isOpen);
-
   return (
     <section className="fixed top-0 w-full z-50 shadow bg-neutral-50">
       <div className="w-[95%] md:w-[650px] lg:w-[850px] xl:w-[1050px] mx-auto flex items-center justify-between py-4">

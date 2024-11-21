@@ -22,9 +22,9 @@ export default async function Skills() {
               title={skill.name}
               height={50}
               width={50}
-              className="size-8 md:size-10 object-cover"
+              className="size-6 md:size-8 lg:size-10 object-cover"
             />
-            <h2 className="text-[0.9rem] md:text-[1rem] font-semibold text-neutral-900">
+            <h2 className="text-[0.8rem] md:text-[0.9rem] lg:text-[1rem] font-semibold text-neutral-900">
               {skill.name}
             </h2>
           </div>

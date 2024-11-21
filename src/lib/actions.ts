@@ -73,8 +73,8 @@ export const getSkills = async () => {
 export const getCertificates = async () => {
   try {
     const res = await fetch('http://localhost:3000/api/certificates', {
-      cache: 'no-cache',
-      next: { revalidate: 1000 },
+      cache: 'force-cache',
+      next: { revalidate: 100000 },
     });
 
     if (!res.ok) {

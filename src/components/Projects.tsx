@@ -19,6 +19,7 @@ export default async function Projects() {
             <Image
               src={project.image}
               alt={project.title}
+              title={project.title}
               width={100}
               height={100}
               className="w-full h-[180px] object-cover object-center rounded-md"
@@ -56,7 +57,10 @@ const BeTheNext = () => {
   return (
     <div className="flex flex-col justify-between border border-neutral-300 shadow rounded-lg p-2 md:p-4">
       <div>
-        <div className="bg-neutral-200 h-[180px] text-neutral-700 text-[1.2rem] md:text-[1.3rem] font-semibold flex items-center justify-center rounded-md">
+        <div
+          title="Be the Next"
+          className="bg-neutral-200 h-[180px] text-neutral-700 text-[1.2rem] md:text-[1.3rem] font-semibold flex items-center justify-center rounded-md"
+        >
           Be the Next
         </div>
         <h2 className="text-[0.9rem] md:text-[1rem] font-semibold text-neutral-900 mt-2">

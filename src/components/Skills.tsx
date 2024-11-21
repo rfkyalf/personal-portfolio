@@ -13,11 +13,13 @@ export default async function Skills() {
         {skills?.data.map((skill: SkillsProps) => (
           <div
             key={skill.id}
+            title={skill.name}
             className="flex items-center gap-x-4 border border-neutral-300 shadow rounded-lg p-2 md:p-4"
           >
             <Image
               src={skill.image}
               alt={skill.name}
+              title={skill.name}
               height={50}
               width={50}
               className="size-8 md:size-10 object-cover"

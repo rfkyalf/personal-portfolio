@@ -20,7 +20,6 @@ export default async function Certificates() {
           >
             <div className="flex flex-wrap items-center gap-2">
               {cert.skills.map((skill) => {
-                console.log(skill.bg_color);
                 return (
                   <span
                     key={skill.id}
@@ -44,6 +43,7 @@ export default async function Certificates() {
             <Image
               src={cert.image}
               alt={cert.title}
+              title={cert.title}
               width={100}
               height={100}
               className="w-full h-[200px] md:h-[220px] object-cover rounded-md mt-2"

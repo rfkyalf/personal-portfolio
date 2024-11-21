@@ -19,6 +19,7 @@ export default async function Experience() {
             <Image
               src={exp.image}
               alt={exp.company}
+              title={exp.company}
               width={100}
               height={100}
               className="size-12 md:size-14 object-contain"
@@ -48,6 +49,7 @@ const OpenToWork = () => {
       <Image
         src="/exp/job-search.webp"
         alt="Open to Work"
+        title="Open to Work"
         width={100}
         height={100}
         className="size-12 md:size-14 object-contain"

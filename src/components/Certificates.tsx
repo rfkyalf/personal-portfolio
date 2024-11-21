@@ -18,7 +18,7 @@ export default async function Certificates() {
             key={cert.id}
             className="flex flex-col justify-between border border-neutral-300 shadow rounded-lg p-2 md:p-4"
           >
-            <div className="flex items-center gap-x-2">
+            <div className="flex flex-wrap items-center gap-2">
               {cert.skills.map((skill) => {
                 console.log(skill.bg_color);
                 return (
@@ -46,7 +46,7 @@ export default async function Certificates() {
               alt={cert.title}
               width={100}
               height={100}
-              className="w-full h-[220px] object-cover rounded-md mt-2"
+              className="w-full h-[200px] md:h-[220px] object-cover rounded-md mt-2"
             />
             <p className="self-end text-[0.8rem] md:text-[0.9rem] text-neutral-900 mt-2 md:mt-3 lg:mt-4">
               {cert.date}

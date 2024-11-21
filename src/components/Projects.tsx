@@ -2,6 +2,7 @@ import Image from 'next/image';
 import { SectionTitle, SectionWrapper } from '../components/SectionComps';
 import { getProjects } from '@/lib/actions';
 import { ProjectsProps } from '@/lib/types';
+import { GoArrowUpRight } from 'react-icons/go';
 
 export default async function Projects() {
   const projects = await getProjects();
@@ -13,7 +14,7 @@ export default async function Projects() {
         {projects.data?.map((project: ProjectsProps) => (
           <div
             key={project.id}
-            className="flex flex-col border border-neutral-300 shadow rounded-lg p-2 md:p-4"
+            className="flex flex-col justify-between border border-neutral-300 shadow rounded-lg p-2 md:p-4"
           >
             <Image
               src={project.image}
@@ -30,7 +31,7 @@ export default async function Projects() {
                 ? project.description.substring(0, 100) + '...'
                 : project.description}
             </p>
-            <div className="flex items-center gap-x-1 mt-4">
+            <div className="flex flex-wrap items-center gap-1 mt-4">
               {project.techs.map((tech) => (
                 <Image
                   key={tech.id}
@@ -45,7 +46,30 @@ export default async function Projects() {
             </div>
           </div>
         ))}
+        <BeTheNext />
       </div>
     </SectionWrapper>
   );
 }
+
+const BeTheNext = () => {
+  return (
+    <div className="flex flex-col justify-between border border-neutral-300 shadow rounded-lg p-2 md:p-4">
+      <div>
+        <div className="bg-neutral-200 h-[180px] text-neutral-700 text-[1.2rem] md:text-[1.3rem] font-semibold flex items-center justify-center rounded-md">
+          Be the Next
+        </div>
+        <h2 className="text-[0.9rem] md:text-[1rem] font-semibold text-neutral-900 mt-2">
+          Let&apos;s Build Something Cool
+        </h2>
+        <p className="text-[0.8rem] md:text-[0.9rem] text-neutral-700">
+          Transform your ideas into reality with me!
+        </p>
+      </div>
+      <button className="w-fit flex items-start self-end bg-neutral-900 text-[0.8rem] md:text-[0.9rem] text-neutral-100 py-[2px] pl-8 pr-7 rounded-md">
+        Contact Me
+        <GoArrowUpRight className="size-3 text-neutral-300" />
+      </button>
+    </div>
+  );
+};

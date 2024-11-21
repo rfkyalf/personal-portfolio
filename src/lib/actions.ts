@@ -74,7 +74,7 @@ export const getCertificates = async () => {
   try {
     const res = await fetch('http://localhost:3000/api/certificates', {
       cache: 'no-cache',
-      // next: { revalidate: 1000 },
+      next: { revalidate: 1000 },
     });
 
     if (!res.ok) {

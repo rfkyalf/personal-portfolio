@@ -34,12 +34,15 @@ export type CertificatesProps = {
   id: number;
   title: string;
   image: string;
+  url: string;
   date: string;
   company: string;
   skills: [
     {
       id: number;
       name: string;
+      bg_color: string;
+      border_color: string;
     }
   ];
 };

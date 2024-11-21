@@ -45,7 +45,7 @@ export default async function Experience() {
 
 const OpenToWork = () => {
   return (
-    <div className="flex items-start gap-x-4 border border-neutral-300 shadow rounded-lg p-4 ">
+    <div className="flex items-start justify-center gap-x-4 border border-neutral-300 shadow rounded-lg p-4 ">
       <Image
         src="/exp/job-search.webp"
         alt="Open to Work"
@@ -61,7 +61,7 @@ const OpenToWork = () => {
         <p className="text-[0.8rem] md:text-[0.9rem] text-neutral-700">
           Ready to contribute as a Frontend Developer
         </p>
-        <button className="w-fit flex items-start self-end bg-neutral-900 text-[0.8rem] md:text-[0.9rem] text-neutral-100 py-[2px] pl-8 pr-7 rounded-md">
+        <button className="w-fit flex items-start self-end bg-neutral-900 text-[0.8rem] md:text-[0.9rem] text-neutral-100 py-[2px] pl-8 pr-7 mt-2 md:mt-0 rounded-md">
           Hire Me
           <GoArrowUpRight className="size-3 text-neutral-300" />
         </button>

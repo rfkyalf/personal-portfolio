@@ -29,3 +29,17 @@ export type SkillsProps = {
   name: string;
   image: string;
 };
+
+export type CertificatesProps = {
+  id: number;
+  title: string;
+  image: string;
+  date: string;
+  company: string;
+  skills: [
+    {
+      id: number;
+      name: string;
+    }
+  ];
+};

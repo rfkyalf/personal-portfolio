@@ -69,3 +69,21 @@ export const getSkills = async () => {
     return null;
   }
 };
+
+export const getCertificates = async () => {
+  try {
+    const res = await fetch('http://localhost:3000/api/certificates', {
+      cache: 'force-cache',
+      next: { revalidate: 100000 },
+    });
+
+    if (!res.ok) {
+      throw new Error('Failed to fetch data');
+    }
+
+    return res.json();
+  } catch (error) {
+    console.log(error);
+    return null;
+  }
+};

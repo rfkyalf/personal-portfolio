@@ -13,6 +13,7 @@ export async function GET(req: NextRequest) {
         certificate.title.toLowerCase().includes(query) ||
         certificate.company.toLowerCase().includes(query)
     );
+
     return NextResponse.json({
       message: 'Success',
       status: 200,

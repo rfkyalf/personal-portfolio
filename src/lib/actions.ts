@@ -1,9 +1,12 @@
-export const getProjects = async () => {
+export const getProjects = async (query: string) => {
   try {
-    const res = await fetch('http://localhost:3000/api/projects', {
-      cache: 'no-cache',
-      next: { revalidate: 3600 },
-    });
+    const res = await fetch(
+      `http://localhost:3000/api/projects?query=${query}`,
+      {
+        cache: 'no-cache',
+        next: { revalidate: 3600 },
+      }
+    );
 
     if (!res.ok) {
       throw new Error('Failed to fetch data');

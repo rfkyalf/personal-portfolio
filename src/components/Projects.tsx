@@ -4,7 +4,7 @@ import ProjectsGrid from './ProjectsGrid';
 import ViewMoreButton from './ViewMoreButton';
 
 export default async function Projects() {
-  const projects = await getProjects();
+  const projects = await getProjects('');
 
   return (
     <SectionWrapper>

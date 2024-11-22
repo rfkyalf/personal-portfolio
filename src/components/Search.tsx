@@ -1,6 +1,7 @@
 'use client';
 
 import { usePathname, useRouter, useSearchParams } from 'next/navigation';
+import { IoSearch } from 'react-icons/io5';
 import { useDebouncedCallback } from 'use-debounce';
 
 export default function Search({ placeholder }: { placeholder: string }) {
@@ -10,8 +11,8 @@ export default function Search({ placeholder }: { placeholder: string }) {
 
   const handleSearch = useDebouncedCallback((term: string) => {
     const params = new URLSearchParams(searchParams);
-    if (term) {
-      params.set('query', term);
+    if (term.trim()) {
+      params.set('query', term.trim());
     } else {
       params.delete('query');
     }
@@ -19,12 +20,14 @@ export default function Search({ placeholder }: { placeholder: string }) {
   }, 500);
 
   return (
-    <div>
+    <div className="relative">
+      <IoSearch className="absolute size-5 top-1/2 left-3 -translate-y-1/2 text-neutral-400" />
       <input
         type="text"
         placeholder={placeholder}
         onChange={(e) => handleSearch(e.target.value)}
         defaultValue={searchParams.get('query')?.toString()}
+        className="w-full bg-neutral-50 border border-neutral-300 rounded-md pl-10 py-1 text-[0.9rem] md:text-[1rem] placeholder:text-neutral-400 text-neutral-800"
       />
     </div>
   );

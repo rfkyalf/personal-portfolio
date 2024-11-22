@@ -14,7 +14,7 @@ export default async function Skills() {
           <div
             key={skill.id}
             title={skill.name}
-            className="flex items-center gap-x-4 border border-neutral-300 shadow rounded-lg p-2 md:p-4"
+            className="flex items-center gap-x-4 border border-neutral-300 shadow rounded-lg p-2 md:p-4 hover:-translate-y-2 transition-transform duration-300 cursor-pointer"
           >
             <Image
               src={skill.image}

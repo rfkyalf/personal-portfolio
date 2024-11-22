@@ -93,10 +93,13 @@ const BeTheNext = () => {
           Transform your ideas into reality with me!
         </p>
       </div>
-      <button className="w-fit flex items-start self-end bg-neutral-900 text-[0.8rem] md:text-[0.9rem] text-neutral-100 py-[2px] pl-8 pr-7 mt-4 md:mt-0 rounded-md">
+      <Link
+        href={'mailto:alfarez2325@gmail.com'}
+        className="w-fit flex items-start self-end bg-neutral-900 text-[0.8rem] md:text-[0.9rem] text-neutral-100 py-[2px] pl-8 pr-7 mt-4 md:mt-0 rounded-md hover:bg-neutral-700 transition-colors duration-300"
+      >
         Contact Me
         <GoArrowUpRight className="size-3 text-neutral-300" />
-      </button>
+      </Link>
     </div>
   );
 };

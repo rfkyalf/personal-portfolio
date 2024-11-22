@@ -16,7 +16,7 @@ export default async function Certificates() {
             href={cert.url}
             target="_blank"
             key={cert.id}
-            className="flex flex-col justify-between border border-neutral-300 shadow rounded-lg p-2 md:p-4"
+            className="flex flex-col justify-between border border-neutral-300 shadow rounded-lg p-2 md:p-4 hover:scale-95 transition duration-300"
           >
             <div className="flex flex-wrap items-center gap-2">
               {cert.skills.map((skill) => {

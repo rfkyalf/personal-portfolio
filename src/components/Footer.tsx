@@ -6,7 +6,7 @@ export default function Footer() {
       <p className="text-[0.9rem] md:text-[1rem] text-neutral-900">
         Created by&nbsp;
         <Link
-          href={'TODO: linkedin link'}
+          href={'https://www.linkedin.com/in/rifkyalfarez/'}
           className="font-bold hover:underline"
         >
           Rifky Alfarez

@@ -5,6 +5,7 @@ import { ProjectsProps } from '@/lib/types';
 import { GoArrowUpRight } from 'react-icons/go';
 import { FaPlay } from 'react-icons/fa6';
 import Link from 'next/link';
+import ViewMoreButton from './ViewMoreButton';
 
 export default async function Projects() {
   const projects = await getProjects();
@@ -72,6 +73,7 @@ export default async function Projects() {
         ))}
         <BeTheNext />
       </div>
+      <ViewMoreButton href="/projects" />
     </SectionWrapper>
   );
 }

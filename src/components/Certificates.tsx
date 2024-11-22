@@ -1,8 +1,9 @@
-import Image from 'next/image';
-import { SectionTitle, SectionWrapper } from '../components/SectionComps';
 import { getCertificates } from '@/lib/actions';
 import { CertificatesProps } from '@/lib/types';
+import Image from 'next/image';
 import Link from 'next/link';
+import { SectionTitle, SectionWrapper } from '../components/SectionComps';
+import ViewMoreButton from './ViewMoreButton';
 
 export default async function Certificates() {
   const certificates = await getCertificates();
@@ -11,7 +12,7 @@ export default async function Certificates() {
     <SectionWrapper>
       <SectionTitle title="Certificates" />
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2 md:gap-4">
-        {certificates?.data.map((cert: CertificatesProps) => (
+        {certificates?.data.slice(0, 3).map((cert: CertificatesProps) => (
           <Link
             href={cert.url}
             target="_blank"
@@ -54,6 +55,7 @@ export default async function Certificates() {
           </Link>
         ))}
       </div>
+      <ViewMoreButton href="/certificates" />
     </SectionWrapper>
   );
 }

@@ -6,6 +6,7 @@ export const dataProjects = [
     description:
       'Kanabagi is a leading website development company committed to creating exceptional online experiences. They specialize in crafting dynamic and user-friendly websites customized for each client.',
     image: '/prj/kanabagi.webp',
+    gif: '/prj/kanabagi.gif',
     source_code: null,
     demo: null,
     techs: [
@@ -43,6 +44,7 @@ export const dataProjects = [
     description:
       'Widi adalah platform yang menyediakan layanan pembuatan perusahaan, konsultasi hukum, dan digital marketing.',
     image: '/prj/widi.webp',
+    gif: '/prj/widi.gif',
     source_code: null,
     demo: null,
     techs: [
@@ -80,6 +82,7 @@ export const dataProjects = [
     description:
       'AnyMe is your go-to anime hub, where you can explore, discover, and track your favorite shows effortlessly. Find the best recommendations and explore new anime by genre, popularity, or trends.',
     image: '/prj/anyme.webp',
+    gif: '/prj/anyme.gif',
     source_code: 'https://github.com/rfkyalf/anyme-v2.git',
     demo: 'https://any-me.vercel.app/',
     techs: [
@@ -122,6 +125,7 @@ export const dataProjects = [
     description:
       'With Cloudly, predicting the weather has never been easier. Stay up-to-date with real-time weather information, from current conditions to hourly forecasts and long-term outlooks. Cloudly is your reliable source for accurate weather data, helping you plan your day with confidence.',
     image: '/prj/cloudly.webp',
+    gif: '/prj/cloudly.gif',
     source_code: 'https://github.com/rfkyalf/cloudly.git',
     demo: 'cloud-ly.vercel.app',
     techs: [

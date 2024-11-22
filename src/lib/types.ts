@@ -2,6 +2,7 @@ export type ProjectsProps = {
   id: number;
   slug: string;
   image: string;
+  gif: string | null;
   title: string;
   description: string;
   source_code: string | null;
@@ -18,6 +19,7 @@ export type ProjectsProps = {
 export type ExperiencesProps = {
   id: number;
   company: string;
+  slug: string;
   image: string;
   role: string;
   status: string;

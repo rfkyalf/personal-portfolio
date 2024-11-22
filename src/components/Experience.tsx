@@ -3,6 +3,7 @@ import { SectionTitle, SectionWrapper } from '../components/SectionComps';
 import { GoArrowUpRight } from 'react-icons/go';
 import { getExperiences } from '@/lib/actions';
 import { ExperiencesProps } from '@/lib/types';
+import Link from 'next/link';
 
 export default async function Experience() {
   const experiences = await getExperiences();
@@ -12,9 +13,10 @@ export default async function Experience() {
       <SectionTitle title="Experience" />
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2 md:gap-4">
         {experiences.data?.map((exp: ExperiencesProps) => (
-          <div
+          <Link
+            href={`/experiences/${exp.slug}`}
             key={exp.id}
-            className="flex items-start gap-x-4 border border-neutral-300 shadow rounded-lg p-4"
+            className="flex items-start gap-x-4 border border-neutral-300 shadow rounded-lg p-4 transition duration-300 hover:scale-95"
           >
             <Image
               src={exp.image}
@@ -35,7 +37,7 @@ export default async function Experience() {
                 {exp.date}
               </p>
             </div>
-          </div>
+          </Link>
         ))}
         <OpenToWork />
       </div>
@@ -45,7 +47,7 @@ export default async function Experience() {
 
 const OpenToWork = () => {
   return (
-    <div className="flex items-start justify-center gap-x-4 border border-neutral-300 shadow rounded-lg p-4 ">
+    <div className="flex items-start justify-center gap-x-4 border border-neutral-300 shadow rounded-lg p-4 cursor-pointer">
       <Image
         src="/exp/job-search.webp"
         alt="Open to Work"
@@ -61,10 +63,13 @@ const OpenToWork = () => {
         <p className="text-[0.8rem] md:text-[0.9rem] text-neutral-700">
           Ready to contribute as a Frontend Developer
         </p>
-        <button className="w-fit flex items-start self-end bg-neutral-900 text-[0.8rem] md:text-[0.9rem] text-neutral-100 py-[2px] pl-8 pr-7 mt-2 md:mt-0 rounded-md">
+        <Link
+          href={'mailto:alfarez2325@gmail.com'}
+          className="w-fit flex items-start self-end bg-neutral-900 text-[0.8rem] md:text-[0.9rem] text-neutral-100 py-[2px] pl-8 pr-7 mt-2 md:mt-0 rounded-md hover:bg-neutral-700 transition-colors duration-300"
+        >
           Hire Me
           <GoArrowUpRight className="size-3 text-neutral-300" />
-        </button>
+        </Link>
       </div>
     </div>
   );

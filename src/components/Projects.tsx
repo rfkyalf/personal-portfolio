@@ -3,6 +3,8 @@ import { SectionTitle, SectionWrapper } from '../components/SectionComps';
 import { getProjects } from '@/lib/actions';
 import { ProjectsProps } from '@/lib/types';
 import { GoArrowUpRight } from 'react-icons/go';
+import { FaPlay } from 'react-icons/fa6';
+import Link from 'next/link';
 
 export default async function Projects() {
   const projects = await getProjects();
@@ -16,17 +18,38 @@ export default async function Projects() {
             key={project.id}
             className="flex flex-col justify-between border border-neutral-300 shadow rounded-lg p-2 md:p-4"
           >
-            <Image
-              src={project.image}
-              alt={project.title}
-              title={project.title}
-              width={100}
-              height={100}
-              className="w-full h-[180px] object-cover object-center rounded-md"
-            />
-            <h2 className="text-[0.9rem] md:text-[1rem] font-semibold text-neutral-900 mt-2">
+            <Link
+              href={`/projects/${project.slug}`}
+              className="relative w-full h-[180px] group"
+            >
+              <Image
+                src={project.image}
+                alt={project.title}
+                title={project.title}
+                width={100}
+                height={100}
+                className="w-full h-full object-cover object-center rounded-md"
+              />
+              {project.gif && (
+                <Image
+                  src={project.gif || project.image}
+                  alt={project.title}
+                  title={project.title}
+                  width={100}
+                  height={100}
+                  className="absolute top-0 left-0 w-full h-full object-cover object-center rounded-md opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                />
+              )}
+              <div className="absolute top-0 left-0 w-full h-full flex items-center justify-center bg-neutral-950/40 rounded-md opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <FaPlay className="size-10 text-neutral-50" />
+              </div>
+            </Link>
+            <Link
+              href={`/projects/${project.slug}`}
+              className="text-[0.9rem] md:text-[1rem] font-semibold text-neutral-900 mt-2 hover:underline"
+            >
               {project.title}
-            </h2>
+            </Link>
             <p className="text-[0.8rem] md:text-[0.9rem] text-neutral-700">
               {project.description.length > 100
                 ? project.description.substring(0, 100) + '...'

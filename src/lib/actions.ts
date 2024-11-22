@@ -1,7 +1,7 @@
 export const getProjects = async () => {
   try {
     const res = await fetch('http://localhost:3000/api/projects', {
-      cache: 'force-cache',
+      cache: 'no-cache',
       next: { revalidate: 3600 },
     });
 
@@ -19,7 +19,7 @@ export const getProjects = async () => {
 export const getSummary = async () => {
   try {
     const res = await fetch('http://localhost:3000/api/summary', {
-      cache: 'force-cache',
+      cache: 'no-cache',
       next: { revalidate: 3600 },
     });
 
@@ -37,7 +37,7 @@ export const getSummary = async () => {
 export const getExperiences = async () => {
   try {
     const res = await fetch('http://localhost:3000/api/experiences', {
-      cache: 'force-cache',
+      cache: 'no-cache',
       next: { revalidate: 3600 },
     });
 
@@ -55,7 +55,7 @@ export const getExperiences = async () => {
 export const getSkills = async () => {
   try {
     const res = await fetch('http://localhost:3000/api/skills', {
-      cache: 'force-cache',
+      cache: 'no-cache',
       next: { revalidate: 3600 },
     });
 
@@ -73,7 +73,7 @@ export const getSkills = async () => {
 export const getCertificates = async () => {
   try {
     const res = await fetch('http://localhost:3000/api/certificates', {
-      cache: 'force-cache',
+      cache: 'no-cache',
       next: { revalidate: 3600 },
     });
 

@@ -4,7 +4,7 @@ import CertificatesGrid from './CertificatesGrid';
 import ViewMoreButton from './ViewMoreButton';
 
 export default async function Certificates() {
-  const certificates = await getCertificates();
+  const certificates = await getCertificates('');
 
   return (
     <SectionWrapper>

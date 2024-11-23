@@ -1,9 +1,11 @@
 import Certificates from '@/components/Home/Certificates';
 import Experience from '@/components/Home/Experience';
-import GetInTouch from '@/components/GetInTouch';
+import GetInTouch from '@/components/Home/GetInTouch';
 import Projects from '@/components/Home/Projects';
 import Skills from '@/components/Home/Skills';
 import Summary from '@/components/Home/Summary';
+
+export const dynamic = 'force-dynamic';
 
 export default function Home() {
   return (

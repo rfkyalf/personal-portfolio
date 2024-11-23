@@ -1,7 +1,9 @@
 import axios from 'axios';
 
+const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL;
+
 const axiosInstance = axios.create({
-  baseURL: 'http://localhost:3000/api',
+  baseURL: `${BASE_URL}/api`,
 });
 
 export const getProjects = async (query: string) => {
@@ -51,6 +53,17 @@ export const getSkills = async () => {
 export const getCertificates = async (query: string) => {
   try {
     const res = await axiosInstance.get(`/certificates?query=${query}`);
+
+    return res.data;
+  } catch (error) {
+    console.log(error);
+    return null;
+  }
+};
+
+export const getGetInTouch = async () => {
+  try {
+    const res = await axiosInstance.get('/get-in-touch');
 
     return res.data;
   } catch (error) {

@@ -1,3 +1,10 @@
+export type SummaryProps = {
+  name: string;
+  role: string;
+  summary: string;
+  cv_link: string;
+};
+
 export type ProjectsProps = {
   id: number;
   slug: string;
@@ -45,6 +52,20 @@ export type CertificatesProps = {
       name: string;
       bg_color: string;
       border_color: string;
+    }
+  ];
+};
+
+export type GetInTouchProps = {
+  title: string;
+  text: string;
+  socials: [
+    {
+      id: number;
+      name: string;
+      link: string;
+      icon: string;
+      color: string;
     }
   ];
 };

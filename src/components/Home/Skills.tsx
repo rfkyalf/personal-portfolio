@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import { SectionTitle, SectionWrapper } from '../components/SectionComps';
+import { SectionTitle, SectionWrapper } from '../SectionComps';
 import { getSkills } from '@/lib/actions';
 import { SkillsProps } from '@/lib/types';
 

@@ -1,18 +1,14 @@
+import axios from 'axios';
+
+const axiosInstance = axios.create({
+  baseURL: 'http://localhost:3000/api',
+});
+
 export const getProjects = async (query: string) => {
   try {
-    const res = await fetch(
-      `http://localhost:3000/api/projects?query=${query}`,
-      {
-        cache: 'no-cache',
-        next: { revalidate: 3600 },
-      }
-    );
+    const res = await axiosInstance.get(`/projects?query=${query}`);
 
-    if (!res.ok) {
-      throw new Error('Failed to fetch data');
-    }
-
-    return res.json();
+    return res.data;
   } catch (error) {
     console.log(error);
     return null;
@@ -21,16 +17,9 @@ export const getProjects = async (query: string) => {
 
 export const getSummary = async () => {
   try {
-    const res = await fetch('http://localhost:3000/api/summary', {
-      cache: 'no-cache',
-      next: { revalidate: 3600 },
-    });
+    const res = await axiosInstance.get('/summary');
 
-    if (!res.ok) {
-      throw new Error('Failed to fetch data');
-    }
-
-    return res.json();
+    return res.data;
   } catch (error) {
     console.log(error);
     return null;
@@ -39,16 +28,9 @@ export const getSummary = async () => {
 
 export const getExperiences = async () => {
   try {
-    const res = await fetch('http://localhost:3000/api/experiences', {
-      cache: 'no-cache',
-      next: { revalidate: 3600 },
-    });
+    const res = await axiosInstance.get('/experiences');
 
-    if (!res.ok) {
-      throw new Error('Failed to fetch data');
-    }
-
-    return res.json();
+    return res.data;
   } catch (error) {
     console.log(error);
     return null;
@@ -57,16 +39,9 @@ export const getExperiences = async () => {
 
 export const getSkills = async () => {
   try {
-    const res = await fetch('http://localhost:3000/api/skills', {
-      cache: 'no-cache',
-      next: { revalidate: 3600 },
-    });
+    const res = await axiosInstance.get('/skills');
 
-    if (!res.ok) {
-      throw new Error('Failed to fetch data');
-    }
-
-    return res.json();
+    return res.data;
   } catch (error) {
     console.log(error);
     return null;
@@ -75,19 +50,9 @@ export const getSkills = async () => {
 
 export const getCertificates = async (query: string) => {
   try {
-    const res = await fetch(
-      `http://localhost:3000/api/certificates?query=${query}`,
-      {
-        cache: 'no-cache',
-        next: { revalidate: 3600 },
-      }
-    );
+    const res = await axiosInstance.get(`/certificates?query=${query}`);
 
-    if (!res.ok) {
-      throw new Error('Failed to fetch data');
-    }
-
-    return res.json();
+    return res.data;
   } catch (error) {
     console.log(error);
     return null;

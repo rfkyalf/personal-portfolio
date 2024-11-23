@@ -1,10 +1,9 @@
-import Certificates from '@/components/Certificates';
-import Experience from '@/components/Experience';
+import Certificates from '@/components/Home/Certificates';
+import Experience from '@/components/Home/Experience';
 import GetInTouch from '@/components/GetInTouch';
-import Projects from '@/components/Projects';
-
-import Skills from '@/components/Skills';
-import Summary from '@/components/Summary';
+import Projects from '@/components/Home/Projects';
+import Skills from '@/components/Home/Skills';
+import Summary from '@/components/Home/Summary';
 
 export default function Home() {
   return (

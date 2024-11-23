@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import { SectionTitle, SectionWrapper } from '../components/SectionComps';
+import { SectionTitle, SectionWrapper } from '../SectionComps';
 import { GoArrowUpRight } from 'react-icons/go';
 import { getExperiences } from '@/lib/actions';
 import { ExperiencesProps } from '@/lib/types';

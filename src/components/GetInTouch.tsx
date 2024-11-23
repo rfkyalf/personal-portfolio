@@ -3,14 +3,15 @@ import { GoArrowUpRight } from 'react-icons/go';
 import { SectionTitle } from '@/components/SectionComps';
 import Link from 'next/link';
 
+const GET_IN_TOUCH_TEXT =
+  'I am currently seeking job opportunities to gain more experience in the industry. Whether you have any questions or simply want to say hi, I will do my best to get back to you!';
+
 export default function GetInTouch() {
   return (
     <section className="py-[25px] md:py-[30px] lg:py-[35px] flex flex-col items-center">
       <SectionTitle title="Get in Touch" style="text-center" />
       <p className="text-[0.9rem] md:text-[1rem] lg:text-[1.1rem] text-neutral-800 text-pretty text-center">
-        I am currently seeking job opportunities to gain more experience in the
-        industry. Whether you have any questions or simply want to say hi, I
-        will do my best to get back to you!
+        {GET_IN_TOUCH_TEXT}
       </p>
       <Link
         href={'mailto:alfarez2325@gmail.com'}

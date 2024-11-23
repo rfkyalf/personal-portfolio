@@ -17,6 +17,17 @@ export const getProjects = async (query: string) => {
   }
 };
 
+export const getProject = async (slug: string) => {
+  try {
+    const res = await axiosInstance.get(`/projects/${slug}`);
+
+    return res.data;
+  } catch (error) {
+    console.log(error);
+    return null;
+  }
+};
+
 export const getSummary = async () => {
   try {
     const res = await axiosInstance.get('/summary');

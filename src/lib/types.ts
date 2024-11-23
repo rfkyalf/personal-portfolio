@@ -12,8 +12,19 @@ export type ProjectsProps = {
   gif: string | null;
   title: string;
   description: string;
+  features: [
+    {
+      id: number;
+      emoji: string;
+      title: string;
+      description: string;
+    }
+  ];
   source_code: string | null;
   demo: string | null;
+  project_name: string | null;
+  run_project: string;
+  localhost: string;
   techs: [
     {
       id: number;

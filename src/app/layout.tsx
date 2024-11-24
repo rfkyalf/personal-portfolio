@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import './globals.css';
 import { Lato } from 'next/font/google';
 import TopLoadingProviders from '@/providers/TopLoadingProvider';
+import { BASE_URL } from '@/lib/constants';
 
 const lato = Lato({
   subsets: ['latin'],
@@ -9,7 +10,7 @@ const lato = Lato({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://rifkyalfarez.my.id'),
+  metadataBase: new URL(`${BASE_URL}`),
   title: {
     default: 'Rifky Alfarez | Personal Website',
     template: '%s | Rifky Alfarez',
@@ -19,7 +20,7 @@ export const metadata: Metadata = {
     title: 'Rifky Alfarez | Personal Website',
     description: 'TODO: Add description',
     images: '/opengraph-image.png',
-    url: 'https://rifkyalfarez.my.id',
+    url: `${BASE_URL}`,
     siteName: 'Rifky Alfarez | Personal Website',
     locale: 'en-US',
     type: 'website',

@@ -1,6 +1,7 @@
 import BackButton from '@/components/BackButton';
 import { TitleExp } from '@/components/Experience/ExpComps';
 import { getExperience } from '@/lib/actions';
+import { BASE_URL } from '@/lib/constants';
 import { MotionElement } from '@/lib/framer';
 import { ExperiencesProps } from '@/lib/types';
 import { Metadata } from 'next';
@@ -29,7 +30,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       title: experience?.company,
       description: `At ${experience.company}, based in ${experience.location}, I proudly served as a ${experience.role} contributing my expertise ${experience.work_arrangement}ly from ${experience.date}.`,
       images: experience?.image,
-      url: `https://rifkyalfarez.my.id/experiences/${experience?.slug}`,
+      url: `${BASE_URL}/experiences/${experience?.slug}`,
       type: 'website',
       siteName: 'Rifky Alfarez | Personal Website',
     },

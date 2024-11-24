@@ -6,6 +6,7 @@ import { TitleProject } from '@/components/Project/ProjectComps';
 import ProjectImageSection from '@/components/Project/ProjectImageSection';
 import Usage from '@/components/Project/Usage';
 import { getProject } from '@/lib/actions';
+import { BASE_URL } from '@/lib/constants';
 import { MotionElement } from '@/lib/framer';
 import { ProjectsProps } from '@/lib/types';
 import { Metadata } from 'next';
@@ -34,7 +35,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       title: project?.title,
       description: project?.description,
       images: project?.image,
-      url: `https://rifkyalfarez.my.id/projects/${project?.slug}`,
+      url: `${BASE_URL}/projects/${project?.slug}`,
       type: 'website',
       siteName: 'Rifky Alfarez | Personal Website',
     },

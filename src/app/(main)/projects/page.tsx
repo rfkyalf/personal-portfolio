@@ -3,6 +3,16 @@ import Search from '@/components/Search';
 import { getProjects } from '@/lib/actions';
 import { MotionElement } from '@/lib/framer';
 
+export const metadata = {
+  title: 'Projects',
+  description:
+    'Showcasing the implementation of my skills through a variety of personal and real-world projects, highlighting expertise in frontend development',
+  openGraph: {
+    description:
+      'Showcasing the implementation of my skills through a variety of personal and real-world projects, highlighting expertise in frontend development',
+  },
+};
+
 export default async function ProjectsPage(props: {
   searchParams?: Promise<{
     query?: string;

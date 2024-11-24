@@ -3,7 +3,37 @@ import { TitleExp } from '@/components/Experience/ExpComps';
 import { getExperience } from '@/lib/actions';
 import { MotionElement } from '@/lib/framer';
 import { ExperiencesProps } from '@/lib/types';
+import { Metadata } from 'next';
 import { notFound } from 'next/navigation';
+
+export async function generateMetadata({
+  params,
+}: {
+  params: { slug: string };
+}): Promise<Metadata | undefined> {
+  const data = await getExperience(params.slug);
+  const experience: ExperiencesProps = data.data;
+
+  if (data.status === 404)
+    return {
+      title: { absolute: 'Experience not found' },
+      description:
+        'Experience not found, please check your spelling and try again',
+    };
+
+  return {
+    title: experience?.company,
+    description: `At ${experience.company}, based in ${experience.location}, I proudly served as a ${experience.role} contributing my expertise ${experience.work_arrangement}ly from ${experience.date}.`,
+    openGraph: {
+      title: experience?.company,
+      description: `At ${experience.company}, based in ${experience.location}, I proudly served as a ${experience.role} contributing my expertise ${experience.work_arrangement}ly from ${experience.date}.`,
+      images: experience?.image,
+      url: `https://rifkyalfarez.my.id/experiences/${experience?.slug}`,
+      type: 'website',
+      siteName: 'Rifky Alfarez | Personal Website',
+    },
+  };
+}
 
 export default async function page(props: {
   params: Promise<{ slug: string }>;

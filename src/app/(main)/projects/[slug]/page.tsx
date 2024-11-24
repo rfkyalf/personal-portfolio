@@ -8,7 +8,37 @@ import Usage from '@/components/Project/Usage';
 import { getProject } from '@/lib/actions';
 import { MotionElement } from '@/lib/framer';
 import { ProjectsProps } from '@/lib/types';
+import { Metadata } from 'next';
 import { notFound } from 'next/navigation';
+
+export async function generateMetadata({
+  params,
+}: {
+  params: { slug: string };
+}): Promise<Metadata | undefined> {
+  const data = await getProject(params.slug);
+  const project: ProjectsProps = data.data;
+
+  if (data.status === 404)
+    return {
+      title: { absolute: 'Project not found' },
+      description:
+        'Project not found, please check your spelling and try again',
+    };
+
+  return {
+    title: project?.title,
+    description: project?.description,
+    openGraph: {
+      title: project?.title,
+      description: project?.description,
+      images: project?.image,
+      url: `https://rifkyalfarez.my.id/projects/${project?.slug}`,
+      type: 'website',
+      siteName: 'Rifky Alfarez | Personal Website',
+    },
+  };
+}
 
 export default async function page(props: {
   params: Promise<{ slug: string }>;

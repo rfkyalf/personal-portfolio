@@ -3,6 +3,16 @@ import Search from '@/components/Search';
 import { getCertificates } from '@/lib/actions';
 import { MotionElement } from '@/lib/framer';
 
+export const metadata = {
+  title: 'Certificates',
+  description:
+    'A collection of my certifications that reflect my commitment to continuous learning and professional development.',
+  openGraph: {
+    description:
+      'A collection of my certifications that reflect my commitment to continuous learning and professional development.',
+  },
+};
+
 export default async function CertificatesPage(props: {
   searchParams?: Promise<{
     query?: string;

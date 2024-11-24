@@ -4,6 +4,7 @@ import { SectionTitle } from '@/components/SectionComps';
 import Link from 'next/link';
 import { getGetInTouch } from '@/lib/actions';
 import { GetInTouchProps } from '@/lib/types';
+import { MotionElement } from '@/lib/framer';
 
 const iconMap: { [key: string]: React.ElementType } = {
   FaLinkedin: FaLinkedin,
@@ -16,7 +17,14 @@ export default async function GetInTouch() {
   const getInTouch: GetInTouchProps = data.data;
 
   return (
-    <section className="py-[25px] md:py-[30px] lg:py-[35px] flex flex-col items-center">
+    <MotionElement
+      as="section"
+      initial={{ y: 50, opacity: 0 }}
+      whileInView={{ y: 0, opacity: 1 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.5 }}
+      className="py-[25px] md:py-[30px] lg:py-[35px] flex flex-col items-center"
+    >
       <SectionTitle title={getInTouch?.title} style="text-center" />
       <p className="text-[0.9rem] md:text-[1rem] lg:text-[1.1rem] text-neutral-800 text-pretty text-center">
         {getInTouch?.text}
@@ -48,6 +56,6 @@ export default async function GetInTouch() {
           );
         })}
       </div>
-    </section>
+    </MotionElement>
   );
 }

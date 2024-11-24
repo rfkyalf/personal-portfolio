@@ -1,4 +1,5 @@
 import { getSummary } from '@/lib/actions';
+import { MotionElement } from '@/lib/framer';
 import { SummaryProps } from '@/lib/types';
 import Link from 'next/link';
 
@@ -7,7 +8,13 @@ export default async function Summary() {
   const summary: SummaryProps = data.data;
 
   return (
-    <section className="flex flex-col gap-y-[15px] md:gap-y-[20px] lg:gap-y-[25px] border-b border-neutral-300 pb-[25px] md:pb-[30px] lg:pb-[35px]">
+    <MotionElement
+      as="section"
+      initial={{ opacity: 0, x: -50 }}
+      animate={{ opacity: 1, x: 0 }}
+      transition={{ duration: 0.5 }}
+      className="flex flex-col gap-y-[15px] md:gap-y-[20px] lg:gap-y-[25px] border-b border-neutral-300 pb-[25px] md:pb-[30px] lg:pb-[35px]"
+    >
       <div>
         <h1 className="text-[1.7rem] md:text-[1.8rem] lg:text-[1.9rem] font-bold text-neutral-950">
           {summary?.name}
@@ -25,6 +32,6 @@ export default async function Summary() {
       >
         Download CV
       </Link>
-    </section>
+    </MotionElement>
   );
 }

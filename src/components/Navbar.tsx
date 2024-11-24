@@ -1,5 +1,6 @@
 'use client';
 
+import { MotionElement } from '@/lib/framer';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { useState } from 'react';
@@ -29,7 +30,13 @@ export default function Navbar() {
   };
 
   return (
-    <section className="fixed top-0 w-full z-50 shadow bg-neutral-50">
+    <MotionElement
+      as="section"
+      initial={{ opacity: 0, y: -50 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5, delay: 0.5 }}
+      className="fixed top-0 w-full z-50 shadow bg-neutral-50"
+    >
       <div className="w-[95%] md:w-[650px] lg:w-[850px] xl:w-[1050px] mx-auto flex items-center justify-between py-4">
         <Link
           href={'/'}
@@ -117,6 +124,6 @@ export default function Navbar() {
           )}
         </nav>
       </div>
-    </section>
+    </MotionElement>
   );
 }

@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import './globals.css';
 import { Lato } from 'next/font/google';
+import TopLoadingProviders from '@/providers/TopLoadingProvider';
 
 const lato = Lato({
   subsets: ['latin'],
@@ -20,7 +21,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${lato.className} antialiased bg-neutral-50`}>
-        {children}
+        <TopLoadingProviders>{children}</TopLoadingProviders>
       </body>
     </html>
   );

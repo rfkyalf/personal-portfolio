@@ -1,6 +1,6 @@
 'use client';
 
-import { useRouter } from 'next/navigation';
+import { useRouter } from 'next-nprogress-bar';
 import { GoArrowLeft } from 'react-icons/go';
 
 export default function BackButton() {

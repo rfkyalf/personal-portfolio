@@ -50,6 +50,17 @@ export const getExperiences = async () => {
   }
 };
 
+export const getExperience = async (slug: string) => {
+  try {
+    const res = await axiosInstance.get(`/experiences/${slug}`);
+
+    return res.data;
+  } catch (error) {
+    console.log(error);
+    return null;
+  }
+};
+
 export const getSkills = async () => {
   try {
     const res = await axiosInstance.get('/skills');

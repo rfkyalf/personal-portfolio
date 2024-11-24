@@ -37,6 +37,14 @@ export type ProjectsProps = {
 export type ExperiencesProps = {
   id: number;
   company: string;
+  location: string;
+  work_arrangement: string;
+  contributions: [
+    {
+      id: number;
+      description: string;
+    }
+  ];
   slug: string;
   image: string;
   role: string;

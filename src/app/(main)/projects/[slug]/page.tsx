@@ -7,12 +7,16 @@ import ProjectImageSection from '@/components/Project/ProjectImageSection';
 import Usage from '@/components/Project/Usage';
 import { getProject } from '@/lib/actions';
 import { ProjectsProps } from '@/lib/types';
+import { notFound } from 'next/navigation';
 
 export default async function page(props: {
   params: Promise<{ slug: string }>;
 }) {
   const { slug } = await props.params;
   const data = await getProject(slug);
+
+  if (data.status === 404) return notFound();
+
   const project: ProjectsProps = data.data;
 
   return (

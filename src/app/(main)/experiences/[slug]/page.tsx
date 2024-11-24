@@ -1,0 +1,50 @@
+import BackButton from '@/components/BackButton';
+import { TitleExp } from '@/components/Experience/ExpComps';
+import { getExperience } from '@/lib/actions';
+import { ExperiencesProps } from '@/lib/types';
+import { notFound } from 'next/navigation';
+
+export default async function page(props: {
+  params: Promise<{ slug: string }>;
+}) {
+  const { slug } = await props.params;
+  const data = await getExperience(slug);
+
+  if (data.status === 404) return notFound();
+
+  const experience: ExperiencesProps = data.data;
+
+  return (
+    <main className="w-[95%] md:w-[650px] lg:w-[850px] xl:w-[1050px] min-h-screen mx-auto flex flex-col gap-y-4 md:gap-y-6 py-4 md:py-6">
+      <BackButton />
+      <TitleExp
+        title={experience.company}
+        date={experience.date}
+        image={experience.image}
+      />
+      <p className="text-[0.9rem] md:text-[1rem] text-neutral-800 text-pretty">
+        At {experience.company}, based in {experience.location}, I proudly
+        served as a <span className="font-bold">{experience.role}</span>&nbsp;
+        contributing my expertise&nbsp;
+        {experience.work_arrangement}ly from&nbsp;
+        {experience.date}.
+      </p>
+      <div className="flex flex-col">
+        <p className="text-[1rem] md:text-[1.1rem] lg:text-[1.2rem] text-neutral-950 font-semibold text-pretty">
+          As a {experience.role}, my contributions include:
+        </p>
+        <div className="flex flex-col gap-y-1 md:gap-y-2 mt-1 md:mt-2 px-2 md:px-4">
+          {experience.contributions.map((contribution) => (
+            <p
+              key={contribution.id}
+              className="text-[0.9rem] md:text-[1rem] text-neutral-800 text-pretty"
+            >
+              {contribution.id}.&nbsp;
+              {contribution.description}
+            </p>
+          ))}
+        </div>
+      </div>
+    </main>
+  );
+}

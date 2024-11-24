@@ -11,7 +11,7 @@ export default function MainLayout({
 }) {
   const pathname = usePathname();
 
-  const hideNavFoot = /^\/projects\/[^/]+$/.test(pathname);
+  const hideNavFoot = /^\/(projects|experiences)\/[^/]+$/.test(pathname);
 
   return (
     <>

@@ -6,12 +6,13 @@ import { ExperiencesProps } from '@/lib/types';
 import { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 
-export async function generateMetadata({
-  params,
-}: {
-  params: { slug: string };
-}): Promise<Metadata | undefined> {
-  const data = await getExperience(params.slug);
+type Props = {
+  params: Promise<{ slug: string }>;
+};
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const slug = (await params).slug;
+  const data = await getExperience(slug);
   const experience: ExperiencesProps = data.data;
 
   if (data.status === 404)

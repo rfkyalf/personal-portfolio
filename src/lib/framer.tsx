@@ -13,7 +13,7 @@ const MotionElement = React.forwardRef<
   HTMLElement,
   MotionElementProps<keyof JSX.IntrinsicElements>
 >(function MotionElement({ as: Component = 'div', children, ...props }, ref) {
-  const MotionComponent = motion(Component);
+  const MotionComponent = motion.create(Component);
   return (
     <MotionComponent ref={ref} {...props}>
       {children}

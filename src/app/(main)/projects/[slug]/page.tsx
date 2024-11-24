@@ -11,12 +11,13 @@ import { ProjectsProps } from '@/lib/types';
 import { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 
-export async function generateMetadata({
-  params,
-}: {
-  params: { slug: string };
-}): Promise<Metadata | undefined> {
-  const data = await getProject(params.slug);
+type Props = {
+  params: Promise<{ slug: string }>;
+};
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const slug = (await params).slug;
+  const data = await getProject(slug);
   const project: ProjectsProps = data.data;
 
   if (data.status === 404)

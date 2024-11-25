@@ -1,4 +1,4 @@
-import type { Metadata } from 'next';
+import type { Metadata, Viewport } from 'next';
 import './globals.css';
 import { Lato } from 'next/font/google';
 import TopLoadingProviders from '@/providers/TopLoadingProvider';
@@ -11,20 +11,38 @@ const lato = Lato({
 
 export const metadata: Metadata = {
   metadataBase: new URL(`${BASE_URL}`),
+  applicationName: 'Rifky Alfarez | Personal Website',
+  manifest: '/manifest.json',
+  appleWebApp: {
+    title: 'Rifky Alfarez | Personal Website',
+    statusBarStyle: 'default',
+    capable: true,
+  },
+  creator: 'Rifky Alfarez',
   title: {
     default: 'Rifky Alfarez | Personal Website',
     template: '%s | Rifky Alfarez',
   },
-  description: 'TODO: Add description',
+  description:
+    'Rifky Alfarez personal website, discover my portfolio, projects, and professional journey in technology.',
   openGraph: {
     title: 'Rifky Alfarez | Personal Website',
-    description: 'TODO: Add description',
+    description:
+      'Rifky Alfarez personal website, discover my portfolio, projects, and professional journey in technology.',
     images: '/opengraph-image.png',
     url: `${BASE_URL}`,
     siteName: 'Rifky Alfarez | Personal Website',
     locale: 'en-US',
     type: 'website',
   },
+  robots: {
+    index: true,
+    follow: true,
+  },
+};
+
+export const viewport: Viewport = {
+  themeColor: '#0a0a0a',
 };
 
 export default function RootLayout({

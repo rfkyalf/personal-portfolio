@@ -46,6 +46,7 @@ export default async function GetInTouch() {
             <Link
               key={social.id}
               href={social.link}
+              aria-label={social.name}
               target="_blank"
               className="hover:scale-95 transition duration-300 group"
             >

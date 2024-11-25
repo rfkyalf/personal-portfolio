@@ -30,7 +30,7 @@ export default function CertificatesGrid({
                   return (
                     <span
                       key={skill.id}
-                      className="w-fit text-[0.7rem] text-neutral-100 border rounded-full px-2"
+                      className="w-fit text-[0.7rem] text-neutral-950 border rounded-full px-2"
                       style={{
                         backgroundColor: skill.bg_color,
                         borderColor: skill.border_color,

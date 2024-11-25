@@ -29,6 +29,7 @@ export default async function Summary() {
       <Link
         className="w-fit text-[0.8rem] md:text-[0.9rem] lg:text-[1rem] text-neutral-800 hover:underline"
         href={summary?.cv_link}
+        data-disable-nprogress={true}
       >
         Download CV
       </Link>

@@ -2,6 +2,6 @@ export const dataSummary = {
   name: 'Rifky Alfarez',
   role: 'Frontend Developer',
   summary:
-    'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil hic quas ut esse perspiciatis magni quia numquam id dolorem? A ut nobis explicabo ipsam recusandae impedit eaque labore sed, debitis unde minima doloribus similique temporibus totam pariatur fugit rerum doloremque esse accusantium quis nam sapiente excepturi? Maiores tenetur veniam commodi.',
-  cv_link: 'TODO: link to resume',
+    'Graduated from Informatics of Siliwangi University with a deep interest in web development. Skilled and experienced in designing, developing, and testing websites using modern technologies such as Next.js and React.js.',
+  cv_link: '/CV_RifkyAlfarez.pdf',
 };

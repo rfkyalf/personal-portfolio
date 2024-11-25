@@ -26,6 +26,7 @@ export default async function Experience() {
               className="flex items-start gap-x-4 border border-neutral-300 shadow rounded-lg p-4 transition duration-300 hover:scale-95"
             >
               <Image
+                priority
                 src={exp.image}
                 alt={exp.company}
                 title={exp.company}
@@ -57,6 +58,7 @@ const OpenToWork = () => {
   return (
     <div className="flex items-start justify-center gap-x-4 border border-neutral-300 shadow rounded-lg p-4 cursor-pointer">
       <Image
+        priority
         src="/exp/job-search.webp"
         alt="Open to Work"
         title="Open to Work"

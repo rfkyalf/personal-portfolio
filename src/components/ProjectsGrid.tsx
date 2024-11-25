@@ -21,6 +21,7 @@ export default function ProjectsGrid({
             className="relative w-full h-[180px] group"
           >
             <Image
+              priority
               src={project.image}
               alt={project.title}
               title={project.title}

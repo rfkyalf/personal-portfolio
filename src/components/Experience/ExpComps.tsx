@@ -24,6 +24,7 @@ export function TitleExp({
         </p>
       </div>
       <Image
+        priority
         src={image}
         alt={title}
         height={100}

@@ -65,13 +65,19 @@ export function MobileNav({
       <div>
         <h2 className="text-[0.9rem] text-neutral-800">Let&apos;s Connect</h2>
         <div className="flex items-center gap-x-1 mt-1">
-          <Link href={'https://www.linkedin.com/in/rifkyalfarez/'}>
+          <Link
+            href={'https://www.linkedin.com/in/rifkyalfarez/'}
+            aria-label="Linkedin"
+          >
             <FaLinkedin className="size-6 text-neutral-800" />
           </Link>
-          <Link href={'https://github.com/rfkyalf'}>
+          <Link href={'https://github.com/rfkyalf'} aria-label="Github">
             <FaSquareGithub className="size-6 text-neutral-800" />
           </Link>
-          <Link href={'https://www.instagram.com/rfkyalf/'}>
+          <Link
+            href={'https://www.instagram.com/rfkyalf/'}
+            aria-label="Instagram"
+          >
             <FaSquareInstagram className="size-6 text-neutral-800" />
           </Link>
         </div>

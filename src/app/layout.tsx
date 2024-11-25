@@ -51,7 +51,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body className={`${lato.className} antialiased bg-neutral-50`}>
         <TopLoadingProviders>{children}</TopLoadingProviders>
       </body>

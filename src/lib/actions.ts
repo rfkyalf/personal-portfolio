@@ -2,7 +2,7 @@ import axios from 'axios';
 import { setupCache } from 'axios-cache-interceptor';
 import axiosRetry from 'axios-retry';
 
-const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL;
+const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL || 'http://localhost:3000';
 
 const axiosInstance = setupCache(
   axios.create({

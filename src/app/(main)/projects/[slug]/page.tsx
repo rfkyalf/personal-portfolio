@@ -58,7 +58,7 @@ export default async function page(props: {
       initial={{ x: 50, opacity: 0 }}
       animate={{ x: 0, opacity: 1 }}
       transition={{ duration: 0.5 }}
-      className="w-[95%] md:w-[650px] lg:w-[850px] xl:w-[1050px] min-h-screen mx-auto flex flex-col gap-y-4 md:gap-y-6 py-4 md:py-6"
+      className="w-[90%] md:w-[650px] lg:w-[850px] xl:w-[1050px] min-h-screen mx-auto flex flex-col gap-y-4 md:gap-y-6 py-4 md:py-6"
     >
       <BackButton />
       <TitleProject title={project.title} />

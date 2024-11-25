@@ -88,3 +88,8 @@ export type GetInTouchProps = {
     }
   ];
 };
+
+export type NavbarProps = {
+  name: string;
+  href: string;
+};

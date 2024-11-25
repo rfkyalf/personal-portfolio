@@ -11,6 +11,9 @@ const lato = Lato({
 
 export const metadata: Metadata = {
   metadataBase: new URL(`${BASE_URL}`),
+  verification: {
+    google: 'd03zfWKgHg7jCr3AYJWtkEDpbrIDy6kPQgQJupyOqp4',
+  },
   applicationName: 'Rifky Alfarez | Personal Website',
   manifest: '/manifest.json',
   appleWebApp: {

@@ -1,14 +1,11 @@
 import axios from 'axios';
-import { setupCache } from 'axios-cache-interceptor';
 import axiosRetry from 'axios-retry';
 
 const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL || 'http://localhost:3000';
 
-const axiosInstance = setupCache(
-  axios.create({
-    baseURL: `${BASE_URL}/api`,
-  })
-);
+const axiosInstance = axios.create({
+  baseURL: `${BASE_URL}/api`,
+});
 
 axiosRetry(axiosInstance, {
   retries: 3,
@@ -17,11 +14,7 @@ axiosRetry(axiosInstance, {
 
 export const getProjects = async (query: string) => {
   try {
-    const res = await axiosInstance.get(`/projects?query=${query}`, {
-      cache: {
-        ttl: 1000 * 60 * 5,
-      },
-    });
+    const res = await axiosInstance.get(`/projects?query=${query}`);
 
     if (!res.data) return null;
 
@@ -34,11 +27,7 @@ export const getProjects = async (query: string) => {
 
 export const getProject = async (slug: string) => {
   try {
-    const res = await axiosInstance.get(`/projects/${slug}`, {
-      cache: {
-        ttl: 1000 * 60 * 5,
-      },
-    });
+    const res = await axiosInstance.get(`/projects/${slug}`);
 
     if (!res.data) return null;
 
@@ -51,11 +40,7 @@ export const getProject = async (slug: string) => {
 
 export const getSummary = async () => {
   try {
-    const res = await axiosInstance.get('/summary', {
-      cache: {
-        ttl: 1000 * 60 * 5,
-      },
-    });
+    const res = await axiosInstance.get('/summary');
 
     if (!res.data) return null;
 
@@ -68,11 +53,7 @@ export const getSummary = async () => {
 
 export const getExperiences = async () => {
   try {
-    const res = await axiosInstance.get('/experiences', {
-      cache: {
-        ttl: 1000 * 60 * 5,
-      },
-    });
+    const res = await axiosInstance.get('/experiences');
 
     if (!res.data) return null;
 
@@ -85,11 +66,7 @@ export const getExperiences = async () => {
 
 export const getExperience = async (slug: string) => {
   try {
-    const res = await axiosInstance.get(`/experiences/${slug}`, {
-      cache: {
-        ttl: 1000 * 60 * 5,
-      },
-    });
+    const res = await axiosInstance.get(`/experiences/${slug}`);
 
     if (!res.data) return null;
 
@@ -102,11 +79,7 @@ export const getExperience = async (slug: string) => {
 
 export const getSkills = async () => {
   try {
-    const res = await axiosInstance.get('/skills', {
-      cache: {
-        ttl: 1000 * 60 * 5,
-      },
-    });
+    const res = await axiosInstance.get('/skills');
 
     if (!res.data) return null;
 
@@ -119,11 +92,7 @@ export const getSkills = async () => {
 
 export const getCertificates = async (query: string) => {
   try {
-    const res = await axiosInstance.get(`/certificates?query=${query}`, {
-      cache: {
-        ttl: 1000 * 60 * 5,
-      },
-    });
+    const res = await axiosInstance.get(`/certificates?query=${query}`);
 
     if (!res.data) return null;
 
@@ -136,11 +105,7 @@ export const getCertificates = async (query: string) => {
 
 export const getGetInTouch = async () => {
   try {
-    const res = await axiosInstance.get('/get-in-touch', {
-      cache: {
-        ttl: 1000 * 60 * 5,
-      },
-    });
+    const res = await axiosInstance.get('/get-in-touch');
 
     if (!res.data) return null;
 

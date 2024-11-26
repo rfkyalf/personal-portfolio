@@ -1,7 +1,7 @@
 import { NAV_LIST } from '@/lib/constants';
 import { NavbarProps } from '@/lib/types';
 import Link from 'next/link';
-import { FaLinkedin, FaSquareGithub, FaSquareInstagram } from 'react-icons/fa6';
+import Icon from '../Icon';
 
 export function Nav({ pathname }: { pathname: string }) {
   return (
@@ -69,16 +69,16 @@ export function MobileNav({
             href={'https://www.linkedin.com/in/rifkyalfarez/'}
             aria-label="Linkedin"
           >
-            <FaLinkedin className="size-6 text-neutral-800" />
+            <Icon icon="linkedin" style="size-6 text-neutral-800" />
           </Link>
           <Link href={'https://github.com/rfkyalf'} aria-label="Github">
-            <FaSquareGithub className="size-6 text-neutral-800" />
+            <Icon icon="github" style="size-6 text-neutral-800" />
           </Link>
           <Link
             href={'https://www.instagram.com/rfkyalf/'}
             aria-label="Instagram"
           >
-            <FaSquareInstagram className="size-6 text-neutral-800" />
+            <Icon icon="instagram" style="size-6 text-neutral-800" />
           </Link>
         </div>
       </div>

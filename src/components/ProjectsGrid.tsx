@@ -1,8 +1,7 @@
 import { ProjectsProps } from '@/lib/types';
 import Image from 'next/image';
 import Link from 'next/link';
-import { FaPlay } from 'react-icons/fa6';
-import { GoArrowUpRight } from 'react-icons/go';
+import Icon from './Icon';
 
 export default function ProjectsGrid({
   projects,
@@ -21,7 +20,6 @@ export default function ProjectsGrid({
             className="relative w-full h-[180px] group"
           >
             <Image
-              priority
               src={project.image}
               alt={project.title}
               title={project.title}
@@ -40,7 +38,7 @@ export default function ProjectsGrid({
               />
             )}
             <div className="absolute top-0 left-0 w-full h-full flex items-center justify-center bg-neutral-950/40 rounded-md opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-              <FaPlay className="size-10 text-neutral-50" />
+              <Icon icon="play" style="size-10 text-neutral-50" />
             </div>
           </Link>
           <Link
@@ -96,7 +94,7 @@ const BeTheNext = () => {
         className="w-fit flex items-start self-end bg-neutral-900 text-[0.8rem] md:text-[0.9rem] text-neutral-100 py-[2px] pl-8 pr-7 mt-4 md:mt-0 rounded-md hover:bg-neutral-700 transition-colors duration-300"
       >
         Contact Me
-        <GoArrowUpRight className="size-3 text-neutral-300" />
+        <Icon icon="arrow-right-up" style="size-3 text-neutral-300" />
       </Link>
     </div>
   );

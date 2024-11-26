@@ -1,8 +1,8 @@
 'use client';
 
 import { usePathname, useRouter, useSearchParams } from 'next/navigation';
-import { IoSearch } from 'react-icons/io5';
 import { useDebouncedCallback } from 'use-debounce';
+import Icon from './Icon';
 
 export default function Search({ placeholder }: { placeholder: string }) {
   const searchParams = useSearchParams();
@@ -21,7 +21,10 @@ export default function Search({ placeholder }: { placeholder: string }) {
 
   return (
     <div className="relative">
-      <IoSearch className="absolute size-5 top-1/2 left-3 -translate-y-1/2 text-neutral-400" />
+      <Icon
+        icon="search"
+        style="absolute size-5 top-1/2 left-3 -translate-y-1/2 text-neutral-400"
+      />
       <input
         type="text"
         placeholder={placeholder}

@@ -1,10 +1,10 @@
-import Image from 'next/image';
-import { SectionTitle, SectionWrapper } from '../SectionComps';
-import { GoArrowUpRight } from 'react-icons/go';
 import { getExperiences } from '@/lib/actions';
-import { ExperiencesProps } from '@/lib/types';
-import Link from 'next/link';
 import { MotionElement } from '@/lib/framer';
+import { ExperiencesProps } from '@/lib/types';
+import Image from 'next/image';
+import Link from 'next/link';
+import Icon from '../Icon';
+import { SectionTitle, SectionWrapper } from '../SectionComps';
 
 export default async function Experience() {
   const experiences = await getExperiences();
@@ -26,7 +26,6 @@ export default async function Experience() {
               className="flex items-start gap-x-4 border border-neutral-300 shadow rounded-lg p-4 transition duration-300 hover:scale-95"
             >
               <Image
-                priority
                 src={exp.image}
                 alt={exp.company}
                 title={exp.company}
@@ -58,7 +57,6 @@ const OpenToWork = () => {
   return (
     <div className="flex items-start justify-center gap-x-4 border border-neutral-300 shadow rounded-lg p-4 cursor-pointer">
       <Image
-        priority
         src="/exp/job-search.webp"
         alt="Open to Work"
         title="Open to Work"
@@ -78,7 +76,7 @@ const OpenToWork = () => {
           className="w-fit flex items-start self-end bg-neutral-900 text-[0.8rem] md:text-[0.9rem] text-neutral-100 py-[2px] pl-8 pr-7 mt-2 md:mt-0 rounded-md hover:bg-neutral-700 transition-colors duration-300"
         >
           Hire Me
-          <GoArrowUpRight className="size-3 text-neutral-300" />
+          <Icon icon="arrow-right-up" style="size-3 text-neutral-300" />
         </Link>
       </div>
     </div>

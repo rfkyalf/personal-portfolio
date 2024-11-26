@@ -25,7 +25,6 @@ export default async function Skills() {
               className="flex items-center gap-x-4 border border-neutral-300 shadow rounded-lg p-2 md:p-4 hover:-translate-y-2 transition-transform duration-300 cursor-pointer"
             >
               <Image
-                priority
                 src={skill.image}
                 alt={skill.name}
                 title={skill.name}

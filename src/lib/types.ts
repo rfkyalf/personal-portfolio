@@ -84,7 +84,6 @@ export type GetInTouchProps = {
       name: string;
       link: string;
       icon: string;
-      color: string;
     }
   ];
 };

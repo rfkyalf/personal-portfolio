@@ -34,7 +34,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     openGraph: {
       title: project?.title,
       description: project?.description,
-      images: project?.image,
+      images: project?.large_image,
       url: `${BASE_URL}/projects/${project?.slug}`,
       type: 'website',
       siteName: 'Rifky Alfarez | Personal Website',

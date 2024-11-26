@@ -8,7 +8,8 @@ export type SummaryProps = {
 export type ProjectsProps = {
   id: number;
   slug: string;
-  image: string;
+  large_image: string;
+  small_image: string;
   gif: string | null;
   title: string;
   description: string;

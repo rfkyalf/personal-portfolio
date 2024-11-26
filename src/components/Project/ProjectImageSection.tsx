@@ -10,7 +10,7 @@ export default function ProjectImageSection({
   return (
     <div className="w-full flex flex-col">
       <Image
-        src={project.image}
+        src={project.large_image}
         alt={project.title}
         title={project.title}
         priority

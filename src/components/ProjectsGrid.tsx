@@ -20,7 +20,7 @@ export default function ProjectsGrid({
             className="relative w-full h-[180px] group"
           >
             <Image
-              src={project.image}
+              src={project.small_image}
               alt={project.title}
               title={project.title}
               width={100}
@@ -29,7 +29,7 @@ export default function ProjectsGrid({
             />
             {project.gif && (
               <Image
-                src={project.gif || project.image}
+                src={project.gif || project.small_image}
                 alt={project.title}
                 title={project.title}
                 width={100}

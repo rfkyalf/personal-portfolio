@@ -16,9 +16,9 @@ export function TitleExp({
       className={`flex items-center justify-between border-b border-neutral-300 pb-1 md:pb-2 ${style}`}
     >
       <div>
-        <h1 className="text-[1rem] md:text-[1.1rem] lg:text-[1.2rem] font-bold text-neutral-950">
+        <h2 className="text-[1rem] md:text-[1.1rem] lg:text-[1.2rem] font-bold text-neutral-950">
           {title}
-        </h1>
+        </h2>
         <p className="text-[0.8rem] md:text-[0.9rem] lg:text-[1rem] text-neutral-500">
           {date}
         </p>

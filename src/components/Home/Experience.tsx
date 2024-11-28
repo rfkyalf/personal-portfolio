@@ -34,9 +34,9 @@ export default async function Experience() {
                 className="size-12 md:size-14 object-contain"
               />
               <div>
-                <h2 className="text-[0.9rem] md:text-[1rem] font-semibold text-neutral-900">
+                <h3 className="text-[0.9rem] md:text-[1rem] font-semibold text-neutral-900">
                   {exp.company}
-                </h2>
+                </h3>
                 <p className="text-[0.8rem] md:text-[0.9rem] text-neutral-700">
                   {exp.role} &nbsp; ({exp.status})
                 </p>
@@ -65,9 +65,9 @@ const OpenToWork = () => {
         className="size-12 md:size-14 object-contain"
       />
       <div className="flex flex-col">
-        <h2 className="text-[0.9rem] md:text-[1rem] font-semibold text-neutral-900">
+        <h3 className="text-[0.9rem] md:text-[1rem] font-semibold text-neutral-900">
           Open to Work
-        </h2>
+        </h3>
         <p className="text-[0.8rem] md:text-[0.9rem] text-neutral-700">
           Ready to contribute as a Frontend Developer
         </p>

@@ -82,9 +82,9 @@ const BeTheNext = () => {
         >
           Be the Next
         </div>
-        <h2 className="text-[0.9rem] md:text-[1rem] font-semibold text-neutral-900 mt-2">
+        <h3 className="text-[0.9rem] md:text-[1rem] font-semibold text-neutral-900 mt-2">
           Let&apos;s Build Something Cool
-        </h2>
+        </h3>
         <p className="text-[0.8rem] md:text-[0.9rem] text-neutral-700">
           Transform your ideas into reality with me!
         </p>

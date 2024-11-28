@@ -32,9 +32,9 @@ export default async function Skills() {
                 width={50}
                 className="size-6 md:size-8 lg:size-10 object-cover"
               />
-              <h2 className="text-[0.8rem] md:text-[0.9rem] lg:text-[1rem] font-semibold text-neutral-900">
+              <p className="text-[0.8rem] md:text-[0.9rem] lg:text-[1rem] font-semibold text-neutral-900">
                 {skill.name}
-              </h2>
+              </p>
             </div>
           ))}
         </div>

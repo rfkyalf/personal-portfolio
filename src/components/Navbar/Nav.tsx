@@ -41,9 +41,9 @@ export function MobileNav({
     >
       <div className="flex flex-col">
         <div className="border-b border-neutral-300 pb-4">
-          <h1 className="text-[1.2rem] text-neutral-950 font-bold">
+          <h2 className="text-[1.2rem] text-neutral-950 font-bold">
             Rifky Alfarez
-          </h1>
+          </h2>
           <p className="text-[0.8rem] text-neutral-600">Frontend Developer</p>
         </div>
         <div className="flex flex-col gap-y-2 pt-4 text-[0.9rem] text-neutral-800">

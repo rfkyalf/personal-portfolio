@@ -22,10 +22,10 @@ export function SectionTitle({
   style?: string;
 }) {
   return (
-    <h1
+    <h2
       className={`text-[1.2rem] md:text-[1.3rem] lg:text-[1.4rem] font-semibold text-neutral-900 ${style}`}
     >
       {title}
-    </h1>
+    </h2>
   );
 }

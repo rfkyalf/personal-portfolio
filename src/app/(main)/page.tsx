@@ -1,3 +1,4 @@
+import Articles from '@/components/Home/Articles';
 import Certificates from '@/components/Home/Certificates';
 import Experience from '@/components/Home/Experience';
 import GetInTouch from '@/components/Home/GetInTouch';
@@ -13,6 +14,7 @@ export default function Home() {
       <Summary />
       <Experience />
       <Projects />
+      <Articles />
       <Skills />
       <Certificates />
       <GetInTouch />

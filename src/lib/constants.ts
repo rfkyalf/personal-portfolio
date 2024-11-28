@@ -13,6 +13,10 @@ export const NAV_LIST = [
     href: '/projects',
   },
   {
+    name: 'Articles',
+    href: '/articles',
+  },
+  {
     name: 'Certificates',
     href: '/certificates',
   },

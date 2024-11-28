@@ -1,8 +1,7 @@
-import type { Metadata, Viewport } from 'next';
-import './globals.css';
-import { Lato } from 'next/font/google';
 import TopLoadingProviders from '@/providers/TopLoadingProvider';
-import { BASE_URL } from '@/lib/constants';
+import type { Metadata, Viewport } from 'next';
+import { Lato } from 'next/font/google';
+import './globals.css';
 
 const lato = Lato({
   subsets: ['latin'],
@@ -10,7 +9,7 @@ const lato = Lato({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL(`${BASE_URL}`),
+  metadataBase: new URL('https://www.rifkyalfarez.my.id'),
   verification: {
     google: 'd03zfWKgHg7jCr3AYJWtkEDpbrIDy6kPQgQJupyOqp4',
   },
@@ -33,7 +32,7 @@ export const metadata: Metadata = {
     description:
       'Rifky Alfarez personal website, discover my portfolio, projects, and professional journey in technology.',
     images: '/opengraph-image.png',
-    url: `${BASE_URL}`,
+    url: 'https://www.rifkyalfarez.my.id',
     siteName: 'Rifky Alfarez | Personal Website',
     locale: 'en-US',
     type: 'website',

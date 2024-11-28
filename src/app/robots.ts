@@ -1,4 +1,3 @@
-import { BASE_URL } from '@/lib/constants';
 import { MetadataRoute } from 'next';
 
 export default function robots(): MetadataRoute.Robots {
@@ -8,6 +7,6 @@ export default function robots(): MetadataRoute.Robots {
       allow: '/',
       disallow: '/api/',
     },
-    sitemap: `${BASE_URL}/sitemap.xml`,
+    sitemap: `https://www.rifkyalfarez.my.id/sitemap.xml`,
   };
 }

@@ -1,7 +1,6 @@
 import axios from 'axios';
 import axiosRetry from 'axios-retry';
-
-const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL || 'http://localhost:3000';
+import { BASE_URL } from './constants';
 
 const axiosInstance = axios.create({
   baseURL: `${BASE_URL}/api`,
@@ -20,7 +19,7 @@ export const getProjects = async (query: string) => {
 
     return res.data;
   } catch (error) {
-    console.log(error);
+    console.error(error);
     return null;
   }
 };
@@ -33,7 +32,7 @@ export const getProject = async (slug: string) => {
 
     return res.data;
   } catch (error) {
-    console.log(error);
+    console.error(error);
     return null;
   }
 };
@@ -46,7 +45,7 @@ export const getSummary = async () => {
 
     return res.data;
   } catch (error) {
-    console.log(error);
+    console.error(error);
     return null;
   }
 };
@@ -59,7 +58,7 @@ export const getExperiences = async () => {
 
     return res.data;
   } catch (error) {
-    console.log(error);
+    console.error(error);
     return null;
   }
 };
@@ -72,7 +71,7 @@ export const getExperience = async (slug: string) => {
 
     return res.data;
   } catch (error) {
-    console.log(error);
+    console.error(error);
     return null;
   }
 };
@@ -85,7 +84,7 @@ export const getSkills = async () => {
 
     return res.data;
   } catch (error) {
-    console.log(error);
+    console.error(error);
     return null;
   }
 };
@@ -98,7 +97,7 @@ export const getCertificates = async (query: string) => {
 
     return res.data;
   } catch (error) {
-    console.log(error);
+    console.error(error);
     return null;
   }
 };
@@ -111,7 +110,20 @@ export const getGetInTouch = async () => {
 
     return res.data;
   } catch (error) {
-    console.log(error);
+    console.error(error);
+    return null;
+  }
+};
+
+export const getArticles = async (query: string) => {
+  try {
+    const res = await axiosInstance.get(`/articles?query=${query}`);
+
+    if (!res.data) return null;
+
+    return res.data;
+  } catch (error) {
+    console.error(error);
     return null;
   }
 };

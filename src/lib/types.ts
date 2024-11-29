@@ -93,3 +93,12 @@ export type NavbarProps = {
   name: string;
   href: string;
 };
+
+export type ArticlesProps = {
+  id: number;
+  title: string;
+  description: string;
+  thumbnail: string;
+  author: string;
+  created_at: string;
+};

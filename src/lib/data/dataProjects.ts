@@ -382,7 +382,7 @@ export const dataProjects = [
     small_image: '/prj/cloudly-small.webp',
     gif: '/prj/cloudly.gif',
     source_code: 'https://github.com/rfkyalf/cloudly.git',
-    demo: 'cloud-ly.vercel.app',
+    demo: 'https://cloud-ly.vercel.app/',
     project_name: 'cloudly',
     run_project: 'npm run dev',
     localhost: 'http://localhost:3000',

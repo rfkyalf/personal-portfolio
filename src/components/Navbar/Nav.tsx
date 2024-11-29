@@ -35,7 +35,7 @@ export function MobileNav({
 }) {
   return (
     <nav
-      className={`fixed z-50 top-0 bottom-0 left-0 right-0 min-h-screen w-[80%] bg-neutral-50 shadow flex md:hidden flex-col justify-between px-2 py-4 transition-transform duration-500 ease-in-out ${
+      className={`fixed pt-safe-top pb-safe-bottom z-50 top-0 bottom-0 left-0 right-0 min-h-screen w-[80%] bg-neutral-50 shadow flex md:hidden flex-col justify-between px-2 py-4 transition-transform duration-500 ease-in-out ${
         !isOpen ? '-translate-x-full' : 'translate-x-0'
       }`}
     >

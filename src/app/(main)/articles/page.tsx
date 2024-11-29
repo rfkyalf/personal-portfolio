@@ -2,8 +2,14 @@ import ArticleGrid from '@/components/Home/ArticleSection/ArticleGrid';
 import Search from '@/components/Search';
 import { getArticles } from '@/lib/actions';
 
-export default async function ArticlesPage() {
-  const articles = await getArticles('');
+export default async function ArticlesPage(props: {
+  searchParams?: Promise<{
+    query?: string;
+  }>;
+}) {
+  const searchParams = await props.searchParams;
+  const query = searchParams?.query || '';
+  const articles = await getArticles(query);
 
   return (
     <main className="w-[90%] md:w-[650px] lg:w-[850px] xl:w-[1050px] min-h-screen mx-auto flex flex-col pt-[80px] md:pt-[85px] lg:pt-[90px]">

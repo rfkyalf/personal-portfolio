@@ -85,7 +85,9 @@ const TitleDescription = ({
         {title}
       </Link>
       <p className="text-[0.8rem] md:text-[0.9rem] text-neutral-700 text-pretty">
-        {description}
+        {description.length > 100
+          ? description.slice(0, 100) + '...'
+          : description}
       </p>
     </div>
   );

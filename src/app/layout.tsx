@@ -18,7 +18,6 @@ export const metadata: Metadata = {
   appleWebApp: {
     title: 'Rifky Alfarez | Personal Website',
     statusBarStyle: 'default',
-    capable: true,
   },
   creator: 'Rifky Alfarez',
   title: {

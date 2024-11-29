@@ -1,6 +1,7 @@
 import Icon from '@/components/Icon';
 import { ArticlesProps } from '@/lib/types';
 import Image from 'next/image';
+import Link from 'next/link';
 
 export default function ArticleGrid({
   articles,
@@ -22,7 +23,11 @@ export default function ArticleGrid({
             height={1000}
             className="w-full h-[120px] md:h-[100px] lg:h-[130px] object-cover rounded-md"
           />
-          <TitleDescription title={data.title} description={data.description} />
+          <TitleDescription
+            url={data.url}
+            title={data.title}
+            description={data.description}
+          />
           <div className="w-full flex justify-between items-center mt-1 md:mt-2">
             <AuthorDate author={data.author} created_at={data.created_at} />
             <Icon icon="bookmark" style="size-4 md:size-5" />
@@ -58,15 +63,21 @@ const AuthorDate = ({
 const TitleDescription = ({
   title,
   description,
+  url,
 }: {
   title: string;
   description: string;
+  url: string;
 }) => {
   return (
     <div className="flex flex-col">
-      <h3 className="text-[0.9rem] md:text-[1rem] font-semibold text-neutral-900 hover:underline">
+      <Link
+        title={title}
+        href={url}
+        className="text-[0.9rem] md:text-[1rem] font-semibold text-neutral-900 hover:underline"
+      >
         {title}
-      </h3>
+      </Link>
       <p className="text-[0.8rem] md:text-[0.9rem] text-neutral-700 text-pretty">
         {description}
       </p>

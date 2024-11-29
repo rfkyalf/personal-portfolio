@@ -7,5 +7,6 @@ export const dataArticles = [
     thumbnail: '/articles/article1.webp',
     author: 'Rifky Alfarez',
     created_at: '2024-11-29',
+    url: 'https://dev.to/rifkyalfarez/how-to-fetch-data-using-axios-and-react-query-in-reactjs-4k9k',
   },
 ];

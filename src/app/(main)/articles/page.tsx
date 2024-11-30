@@ -1,4 +1,4 @@
-import ArticleGrid from '@/components/Home/ArticleSection/ArticleGrid';
+import ArticleGrid from '@/components/ArticleGrid';
 import Search from '@/components/Search';
 import { getArticles } from '@/lib/actions';
 

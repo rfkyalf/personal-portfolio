@@ -13,8 +13,8 @@ export default {
         foreground: 'var(--foreground)',
       },
       spacing: {
-        'safe-top': 'calc(env(safe-area-inset-top) + 5px)',
-        'safe-bottom': 'calc(env(safe-area-inset-bottom) + 5px)',
+        'safe-top': 'env(safe-area-inset-top)',
+        'safe-bottom': 'env(safe-area-inset-bottom)',
       },
     },
   },

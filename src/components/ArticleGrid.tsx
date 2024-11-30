@@ -1,5 +1,6 @@
 import Icon from '@/components/Icon';
 import { ArticlesProps } from '@/lib/types';
+import { formatDate } from '@/lib/utils';
 import Image from 'next/image';
 import Link from 'next/link';
 
@@ -59,7 +60,7 @@ const AuthorDate = ({
           {author}
         </p>
         <p className="text-[0.6rem] md:text-[0.7rem] text-neutral-700">
-          {created_at}
+          {formatDate(created_at)}
         </p>
       </div>
     </div>

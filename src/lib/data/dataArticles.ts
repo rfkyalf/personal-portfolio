@@ -6,8 +6,8 @@ export const dataArticles = [
       'Learn how to fetch data using Axios and React Query in ReactJS. This article covers the basics of Axios and React Query, and shows you how to use them together to fetch data from an API in a ReactJS app.',
     thumbnail: '/articles/article1.webp',
     author: 'Rifky Alfarez',
-    created_at: '2024-11-29',
-    url: 'https://dev.to/rifkyalfarez/how-to-fetch-data-using-axios-and-react-query-in-reactjs-4k9k',
+    created_at: '2024-11-30',
+    url: 'https://medium.com/@rifkyalfarez/how-to-integrate-axios-and-react-query-for-data-fetching-0cf848f5728d',
   },
   {
     id: 2,
@@ -17,6 +17,6 @@ export const dataArticles = [
     thumbnail: '/articles/article2.webp',
     author: 'Rifky Alfarez',
     created_at: '2024-11-30',
-    url: 'https://dev.to/rifkyalfarez/how-to-create-grid-and-dots-background-using-tailwind-css-1jkb',
+    url: 'https://medium.com/@rifkyalfarez/how-to-create-grid-and-dots-background-using-tailwind-css-865c9a7c20e6',
   },
 ];

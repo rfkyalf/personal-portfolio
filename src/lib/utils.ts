@@ -6,7 +6,7 @@ export const formatDate = (date: string) => {
   const diffDays = now.diff(inputDate, 'days');
 
   if (diffDays === 0) {
-    return 'recently';
+    return 'Just now';
   } else if (diffDays <= 7) {
     return `${diffDays} day${diffDays === 1 ? '' : 's'} ago`;
   }

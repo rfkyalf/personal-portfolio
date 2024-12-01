@@ -19,4 +19,15 @@ export const dataArticles = [
     created_at: '2024-11-30',
     url: 'https://medium.com/@rifkyalfarez/how-to-create-grid-and-dots-background-using-tailwind-css-865c9a7c20e6',
   },
+  {
+    id: 3,
+    title:
+      'Next.js API Management: Implement Search, Pagination, Filter, Sort, and Limit Features',
+    description:
+      'Improve data handling in Next.js by integrating search, pagination, filter, sort, and limit functionalities for efficient and customizable API responses.',
+    thumbnail: '/articles/article3.webp',
+    author: 'Rifky Alfarez',
+    created_at: '2024-12-01',
+    url: 'https://medium.com/@rifkyalfarez/next-js-api-management-implement-search-pagination-filter-sort-and-limit-features-61e001293141',
+  },
 ];

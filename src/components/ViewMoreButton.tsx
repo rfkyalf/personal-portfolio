@@ -11,7 +11,7 @@ export default function ViewMoreButton({
   return (
     <Link
       href={href}
-      className="text-[0.9rem] md:text-[1rem] text-neutral-900 font-semibold flex items-center justify-center gap-x-1"
+      className="text-[0.9rem] md:text-[1rem] text-neutral-900 hover:underline font-semibold flex items-center justify-center gap-x-1"
     >
       {label}
       <Icon icon="chevrons-right" style="size-4 text-neutral-900" />

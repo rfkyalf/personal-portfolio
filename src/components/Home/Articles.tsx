@@ -1,6 +1,7 @@
 import { getArticles } from '@/lib/actions';
 import { SectionTitle, SectionWrapper } from '../SectionComps';
 import ArticleGrid from '../ArticleGrid';
+import ViewMoreButton from '../ViewMoreButton';
 
 export default async function Articles() {
   const articles = await getArticles('');
@@ -8,7 +9,8 @@ export default async function Articles() {
   return (
     <SectionWrapper>
       <SectionTitle title="Articles" />
-      <ArticleGrid articles={articles} />
+      <ArticleGrid articles={articles} isSliced />
+      <ViewMoreButton href="/articles" />
     </SectionWrapper>
   );
 }

@@ -14,12 +14,14 @@ export async function GET(req: NextRequest) {
         article.description.toLowerCase().includes(query)
     );
 
+    const sortedArticles = filteredArticles.sort((a, b) => b.id - a.id);
+
     return NextResponse.json({
       message: 'Success',
       status: 200,
       query: query,
-      total_item: filteredArticles.length,
-      data: filteredArticles,
+      total_item: sortedArticles.length,
+      data: sortedArticles,
     });
   } catch (error) {
     return NextResponse.json({

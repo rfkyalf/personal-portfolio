@@ -6,9 +6,15 @@ import Link from 'next/link';
 
 export default function ArticleGrid({
   articles,
+  isSliced = false,
 }: {
   articles: { data: ArticlesProps[] };
+  isSliced?: boolean;
 }) {
+  const displayedArticles = isSliced
+    ? articles?.data.slice(0, 3)
+    : articles?.data;
+
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2 md:gap-4">
       {articles?.data.length === 0 ? (
@@ -16,7 +22,7 @@ export default function ArticleGrid({
           No results found. Please check your spelling...
         </p>
       ) : (
-        articles?.data.map((data) => (
+        displayedArticles.map((data) => (
           <div
             key={data.id}
             className="flex flex-col justify-between gap-y-1 md:gap-y-2 border border-neutral-300 rounded-lg shadow p-2 md:p-4"

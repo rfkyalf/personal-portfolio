@@ -27,19 +27,21 @@ export default function ArticleGrid({
             key={data.id}
             className="flex flex-col justify-between gap-y-1 md:gap-y-2 border border-neutral-300 rounded-lg shadow p-2 md:p-4"
           >
-            <Image
-              src={data.thumbnail}
-              alt={data.title}
-              title={data.title}
-              width={1000}
-              height={1000}
-              className="w-full h-[120px] md:h-[100px] lg:h-[130px] object-cover rounded-md"
-            />
-            <TitleDescription
-              url={data.url}
-              title={data.title}
-              description={data.description}
-            />
+            <div className="flex flex-col gap-y-1 md:gap-y-2">
+              <Image
+                src={data.thumbnail}
+                alt={data.title}
+                title={data.title}
+                width={1000}
+                height={1000}
+                className="w-full h-[120px] md:h-[100px] lg:h-[130px] object-cover rounded-md"
+              />
+              <TitleDescription
+                url={data.url}
+                title={data.title}
+                description={data.description}
+              />
+            </div>
             <div className="w-full flex justify-between items-center mt-1 md:mt-2">
               <AuthorDate author={data.author} created_at={data.created_at} />
               <Icon icon="bookmark" style="size-4 md:size-5" />

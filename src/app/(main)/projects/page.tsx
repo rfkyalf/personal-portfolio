@@ -2,11 +2,15 @@ import ProjectsGrid from '@/components/ProjectsGrid';
 import Search from '@/components/Search';
 import { getProjects } from '@/lib/actions';
 import { MotionElement } from '@/lib/framer';
+import { Metadata } from 'next';
 
-export const metadata = {
+export const metadata: Metadata = {
   title: 'Projects',
   description:
     'Showcasing the implementation of my skills through a variety of personal and real-world projects, highlighting expertise in frontend development',
+  alternates: {
+    canonical: 'https://www.rifkyalfarez.my.id/projects',
+  },
   openGraph: {
     description:
       'Showcasing the implementation of my skills through a variety of personal and real-world projects, highlighting expertise in frontend development',

@@ -36,6 +36,9 @@ export const metadata: Metadata = {
     locale: 'en-US',
     type: 'website',
   },
+  alternates: {
+    canonical: 'https://www.rifkyalfarez.my.id',
+  },
   robots: {
     index: true,
     follow: true,

@@ -2,11 +2,13 @@ import CertificatesGrid from '@/components/CertificatesGrid';
 import Search from '@/components/Search';
 import { getCertificates } from '@/lib/actions';
 import { MotionElement } from '@/lib/framer';
+import { Metadata } from 'next';
 
-export const metadata = {
+export const metadata: Metadata = {
   title: 'Certificates',
   description:
     'A collection of my certifications that reflect my commitment to continuous learning and professional development.',
+  alternates: { canonical: 'https://www.rifkyalfarez.my.id/certificates' },
   openGraph: {
     description:
       'A collection of my certifications that reflect my commitment to continuous learning and professional development.',

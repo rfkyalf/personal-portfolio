@@ -1,6 +1,6 @@
 export const BASE_URL =
   process.env.NODE_ENV === 'production'
-    ? 'https://rifkyalfarez.my.id'
+    ? 'https://www.rifkyalfarez.my.id'
     : 'http://localhost:3000';
 
 export const NAV_LIST = [

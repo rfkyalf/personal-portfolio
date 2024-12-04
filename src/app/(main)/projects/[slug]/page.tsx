@@ -6,7 +6,6 @@ import { TitleProject } from '@/components/Project/ProjectComps';
 import ProjectImageSection from '@/components/Project/ProjectImageSection';
 import Usage from '@/components/Project/Usage';
 import { getProject } from '@/lib/actions';
-import { BASE_URL } from '@/lib/constants';
 import { MotionElement } from '@/lib/framer';
 import { ProjectsProps } from '@/lib/types';
 import { Metadata } from 'next';
@@ -31,11 +30,14 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return {
     title: project?.title,
     description: project?.description,
+    alternates: {
+      canonical: `https://www.rifkyalfarez.my.id/projects/${project?.slug}`,
+    },
     openGraph: {
       title: project?.title,
       description: project?.description,
       images: project?.large_image,
-      url: `${BASE_URL}/projects/${project?.slug}`,
+      url: `https://www.rifkyalfarez.my.id/projects/${project?.slug}`,
       type: 'website',
       siteName: 'Rifky Alfarez | Personal Website',
     },

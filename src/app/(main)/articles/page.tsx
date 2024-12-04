@@ -1,6 +1,18 @@
 import ArticleGrid from '@/components/ArticleGrid';
 import Search from '@/components/Search';
 import { getArticles } from '@/lib/actions';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Articles',
+  description:
+    'A collection of my articles that reflect my commitment to continuous learning and professional development.',
+  alternates: { canonical: 'https://www.rifkyalfarez.my.id/articles' },
+  openGraph: {
+    description:
+      'A collection of my articles that reflect my commitment to continuous learning and professional development.',
+  },
+};
 
 export default async function ArticlesPage(props: {
   searchParams?: Promise<{

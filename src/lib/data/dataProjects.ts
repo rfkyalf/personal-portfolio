@@ -414,4 +414,74 @@ export const dataProjects = [
       },
     ],
   },
+  {
+    id: 5,
+    slug: 'notes-app',
+    title: 'Notes App | Keep Your Thoughts',
+    description:
+      'Notes App: Keep Your Thoughts is a straightforward and user-friendly application for capturing and organizing your notes. With its clean interface and simple features, it is the perfect tool to keep all your ideas and thoughts in one place!',
+    features: [
+      {
+        id: 1,
+        emoji: '🎨',
+        title: 'Minimalist Design',
+        description:
+          'Clean and intuitive interface for a distraction-free experience.',
+      },
+      {
+        id: 2,
+        emoji: '🔓',
+        title: 'Public Notes',
+        description: 'Share your thoughts with others through public notes.',
+      },
+      {
+        id: 3,
+        emoji: '🔒',
+        title: 'Private Notes',
+        description: 'Keep your ideas safe with secure private notes.',
+      },
+      {
+        id: 4,
+        emoji: '📱',
+        title: 'Responsive Design',
+        description:
+          'Optimized for a seamless experience across all devices and screen sizes.',
+      },
+    ],
+    large_image: '/prj/notesapp.webp',
+    small_image: '/prj/notesapp.webp',
+    gif: '/prj/notesapp.gif',
+    source_code: 'https://github.com/rfkyalf/note-taking-app.git',
+    demo: 'https://notesapp-v2.vercel.app/',
+    project_name: 'note-taking-app',
+    run_project: 'npm run dev',
+    localhost: 'http://localhost:3000',
+    techs: [
+      {
+        id: 1,
+        name: 'Next.js',
+        image: '/tech/nextjs.webp',
+      },
+      {
+        id: 2,
+        name: 'Tailwind CSS',
+        image: '/tech/tailwind.webp',
+      },
+      {
+        id: 3,
+        name: 'Typescript',
+        image: '/tech/ts.webp',
+      },
+      {
+        id: 4,
+        name: 'Shadcn UI',
+        image: '/tech/shadcn.webp',
+      },
+      {
+        id: 5,
+        name: 'Prisma',
+        image: '/tech/prisma.webp',
+      },
+    ],
+  },
 ];

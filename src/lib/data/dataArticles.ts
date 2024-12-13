@@ -40,4 +40,14 @@ export const dataArticles = [
     created_at: '2024-12-02',
     url: 'https://dev.to/rifkyalfarez/cart-feature-in-reactjs-using-zustand-515l',
   },
+  {
+    id: 5,
+    title: 'Data Visualisation in React Using Chart.js',
+    description:
+      'Learn how to use Chart.js in React to create clear and functional data visualizations. This article provides a step-by-step guide with example code.',
+    thumbnail: '/articles/article5.webp',
+    author: 'Rifky Alfarez',
+    created_at: '2024-12-13',
+    url: 'https://dev.to/rifkyalfarez/data-visualisation-in-react-using-chartjs-41fe',
+  },
 ];

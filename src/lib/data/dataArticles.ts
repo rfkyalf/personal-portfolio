@@ -50,4 +50,24 @@ export const dataArticles = [
     created_at: '2024-12-13',
     url: 'https://dev.to/rifkyalfarez/data-visualisation-in-react-using-chartjs-41fe',
   },
+  {
+    id: 6,
+    title: 'Learn Redux Toolkit - React (TypeScript)',
+    description:
+      'Step-by-step tutorial on implementing Redux Toolkit in React projects using TypeScript.',
+    thumbnail: '/articles/article6.webp',
+    author: 'Rifky Alfarez',
+    created_at: '2024-12-14',
+    url: 'https://dev.to/rifkyalfarez/learn-redux-toolkit-react-typescript-hcm',
+  },
+  {
+    id: 7,
+    title: 'Redux Toolkit - createAsyncThunk()',
+    description:
+      'Discover how to handle async operations like API calls using createAsyncThunk() from Redux Toolkit.',
+    thumbnail: '/articles/article7.webp',
+    author: 'Rifky Alfarez',
+    created_at: '2024-12-15',
+    url: 'https://dev.to/rifkyalfarez/redux-toolkit-createasyncthunk-okm',
+  },
 ];

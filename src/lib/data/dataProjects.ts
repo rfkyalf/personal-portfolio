@@ -484,4 +484,66 @@ export const dataProjects = [
       },
     ],
   },
+  {
+    id: 6,
+    slug: 'dux-store',
+    title: 'DuxStore - Discover, Shop, Enjoy.',
+    description:
+      'DuxStore is a simple e-commerce platform powered by Redux and FakeStoreAPI.',
+    features: [
+      {
+        id: 1,
+        emoji: '⭐',
+        title: 'Favorite Products',
+        description: 'Save your favorite items for easy access anytime.',
+      },
+      {
+        id: 2,
+        emoji: '🛒',
+        title: 'Shopping Cart',
+        description: 'Add products to your cart and check out with ease.',
+      },
+      {
+        id: 3,
+        emoji: '📱',
+        title: 'Responsive Design',
+        description: 'Enjoy a seamless shopping experience on any device.',
+      },
+    ],
+    large_image: '/prj/duxstore.webp',
+    small_image: '/prj/duxstore-small.webp',
+    gif: '/prj/duxtore.gif',
+    source_code: 'https://github.com/rfkyalf/dux-store.git',
+    demo: 'https://dux-store.vercel.app/',
+    project_name: 'dux-store',
+    run_project: 'npm run dev',
+    localhost: 'http://localhost:5173',
+    techs: [
+      {
+        id: 1,
+        name: 'React.js',
+        image: '/tech/nextjs.webp',
+      },
+      {
+        id: 2,
+        name: 'Tailwind CSS',
+        image: '/tech/tailwind.webp',
+      },
+      {
+        id: 3,
+        name: 'Typescript',
+        image: '/tech/ts.webp',
+      },
+      {
+        id: 4,
+        name: 'Shadcn UI',
+        image: '/tech/shadcn.webp',
+      },
+      {
+        id: 5,
+        name: 'Redux',
+        image: '/tech/redux.webp',
+      },
+    ],
+  },
 ];

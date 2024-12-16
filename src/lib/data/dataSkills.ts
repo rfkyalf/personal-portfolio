@@ -51,21 +51,26 @@ export const dataSkills = [
   },
   {
     id: 11,
+    name: 'Redux',
+    image: '/tech/redux.webp',
+  },
+  {
+    id: 12,
     name: 'Framer Motion',
     image: '/tech/framer.webp',
   },
   {
-    id: 12,
+    id: 13,
     name: 'Prisma',
     image: '/tech/prisma.webp',
   },
   {
-    id: 13,
+    id: 14,
     name: 'Git',
     image: '/tech/git.webp',
   },
   {
-    id: 14,
+    id: 15,
     name: 'Figma',
     image: '/tech/figma.webp',
   },

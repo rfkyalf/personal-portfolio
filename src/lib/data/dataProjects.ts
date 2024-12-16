@@ -522,7 +522,7 @@ export const dataProjects = [
       {
         id: 1,
         name: 'React.js',
-        image: '/tech/nextjs.webp',
+        image: '/tech/react.webp',
       },
       {
         id: 2,

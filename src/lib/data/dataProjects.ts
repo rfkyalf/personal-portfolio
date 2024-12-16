@@ -512,7 +512,7 @@ export const dataProjects = [
     ],
     large_image: '/prj/duxstore.webp',
     small_image: '/prj/duxstore-small.webp',
-    gif: '/prj/duxtore.gif',
+    gif: '/prj/duxstore.gif',
     source_code: 'https://github.com/rfkyalf/dux-store.git',
     demo: 'https://dux-store.vercel.app/',
     project_name: 'dux-store',

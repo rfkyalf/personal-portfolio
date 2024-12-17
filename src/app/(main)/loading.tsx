@@ -1,7 +1,9 @@
+import Icon from '@/components/Icon';
+
 export default function loading() {
   return (
-    <div className="h-screen w-full flex items-center justify-center text-[2rem] text-neutral-950 font-bold">
-      Loading...
+    <div className="h-screen w-full flex items-center justify-center animate-spin">
+      <Icon icon="spinner" style="size-10" />
     </div>
   );
 }

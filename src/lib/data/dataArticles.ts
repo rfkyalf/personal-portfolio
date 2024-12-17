@@ -70,4 +70,14 @@ export const dataArticles = [
     created_at: '2024-12-15',
     url: 'https://dev.to/rifkyalfarez/redux-toolkit-createasyncthunk-okm',
   },
+  {
+    id: 8,
+    title: 'React.js API Handling',
+    description:
+      'In this article, I would like to share my experience handling API requests in React.js without using any external libraries. It includes working with HTTP methods like GET, POST, PATCH, and DELETE while implementing features such as search, pagination, sorting, and filtering.',
+    thumbnail: '/articles/article8.webp',
+    author: 'Rifky Alfarez',
+    created_at: '2024-12-17',
+    url: 'https://dev.to/rifkyalfarez/reactjs-api-handling-b99',
+  },
 ];

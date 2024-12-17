@@ -8,6 +8,28 @@ const Skills = dynamic(() => import('@/components/Home/Skills'));
 const Certificates = dynamic(() => import('@/components/Home/Certificates'));
 const GetInTouch = dynamic(() => import('@/components/Home/GetInTouch'));
 
+import { Person, WebPage, WithContext } from 'schema-dts';
+
+export const schemaData: WithContext<WebPage | Person> = {
+  '@context': 'https://schema.org',
+  '@type': 'WebPage',
+  name: 'Rifky Alfarez | Personal Website',
+  url: 'https://www.rifkyalfarez.my.id/',
+  description:
+    'Rifky Alfarez personal website, discover my portfolio, projects, and professional journey in technology.',
+  mainEntity: {
+    '@type': 'Person',
+    name: 'Rifky Alfarez',
+    jobTitle: 'Frontend Developer',
+    url: 'https://www.rifkyalfarez.my.id/',
+    alumniOf: 'Universitas Siliwangi',
+    sameAs: [
+      'https://www.linkedin.com/in/rifkyalfarez',
+      'https://github.com/rfkyalf',
+    ],
+  },
+};
+
 export default function Home() {
   return (
     <main className="w-[90%] md:w-[650px] lg:w-[850px] xl:w-[1050px] min-h-screen mx-auto flex flex-col pt-[80px] md:pt-[85px] lg:pt-[90px]">

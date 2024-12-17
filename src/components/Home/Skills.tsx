@@ -28,9 +28,9 @@ export default async function Skills() {
                 src={skill.image}
                 alt={skill.name}
                 title={skill.name}
-                height={50}
-                width={50}
-                className="size-6 md:size-8 lg:size-10 object-cover"
+                height={200}
+                width={200}
+                className="size-6 md:size-8 lg:size-10 object-contain"
               />
               <p className="text-[0.8rem] md:text-[0.9rem] lg:text-[1rem] font-semibold text-neutral-900">
                 {skill.name}

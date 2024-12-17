@@ -51,8 +51,8 @@ export default function CertificatesGrid({
                 src={cert.image}
                 alt={cert.title}
                 title={cert.title}
-                width={100}
-                height={100}
+                width={1000}
+                height={1000}
                 className="w-full h-[200px] md:h-[220px] object-cover rounded-md mt-2"
               />
               <p className="self-end text-[0.8rem] md:text-[0.9rem] text-neutral-900 mt-2 md:mt-3 lg:mt-4">

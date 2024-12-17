@@ -23,8 +23,8 @@ export default function ProjectsGrid({
               src={project.small_image}
               alt={project.title}
               title={project.title}
-              width={100}
-              height={100}
+              width={1000}
+              height={1000}
               className="w-full h-full object-cover object-center rounded-md"
             />
             {project.gif && (
@@ -61,7 +61,7 @@ export default function ProjectsGrid({
                 title={tech.name}
                 height={50}
                 width={50}
-                className="size-5 object-cover"
+                className="size-5 object-contain"
               />
             ))}
           </div>

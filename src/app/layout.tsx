@@ -2,6 +2,8 @@ import TopLoadingProviders from '@/providers/TopLoadingProvider';
 import type { Metadata, Viewport } from 'next';
 import { Lato } from 'next/font/google';
 import './globals.css';
+import { Person, WebPage, WithContext } from 'schema-dts';
+import Script from 'next/script';
 
 const lato = Lato({
   subsets: ['latin'],
@@ -55,6 +57,26 @@ export const metadata: Metadata = {
   },
 };
 
+const schemaData: WithContext<WebPage | Person> = {
+  '@context': 'https://schema.org',
+  '@type': 'WebPage',
+  name: 'Rifky Alfarez | Personal Website',
+  url: 'https://www.rifkyalfarez.my.id/',
+  description:
+    'Rifky Alfarez personal website, discover my portfolio, projects, and professional journey in technology.',
+  mainEntity: {
+    '@type': 'Person',
+    name: 'Rifky Alfarez',
+    jobTitle: 'Frontend Developer',
+    url: 'https://www.rifkyalfarez.my.id/',
+    alumniOf: 'Universitas Siliwangi',
+    sameAs: [
+      'https://www.linkedin.com/in/rifkyalfarez',
+      'https://github.com/rfkyalf',
+    ],
+  },
+};
+
 export const viewport: Viewport = {
   themeColor: '#0a0a0a',
 };
@@ -67,6 +89,13 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body className={`${lato.className} antialiased bg-neutral-50`}>
+        <Script
+          id="home-schema"
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(schemaData),
+          }}
+        />
         <TopLoadingProviders>{children}</TopLoadingProviders>
       </body>
     </html>

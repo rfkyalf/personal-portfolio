@@ -1,4 +1,5 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
+import StructuredData from '@/components/Schema';
 import dynamic from 'next/dynamic';
 
 const Summary = dynamic(() => import('@/components/Home/Summary'));
@@ -36,10 +37,7 @@ function schemaData(): WithContext<WebPage | Person> {
 export default function Home() {
   return (
     <main className="w-[90%] md:w-[650px] lg:w-[850px] xl:w-[1050px] min-h-screen mx-auto flex flex-col pt-[80px] md:pt-[85px] lg:pt-[90px]">
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }}
-      />
+      <StructuredData data={schemaData()} />
       <Summary />
       <Experience />
       <Projects />

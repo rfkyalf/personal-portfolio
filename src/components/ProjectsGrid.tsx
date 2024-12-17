@@ -17,7 +17,7 @@ export default function ProjectsGrid({
         >
           <Link
             href={`/projects/${project.slug}`}
-            className="relative w-full h-[180px] group"
+            className="relative w-full h-[180px]"
           >
             <Image
               src={project.small_image}
@@ -27,19 +27,6 @@ export default function ProjectsGrid({
               height={1000}
               className="w-full h-full object-cover object-center rounded-md"
             />
-            {project.gif && (
-              <Image
-                src={project.gif || project.small_image}
-                alt={project.title}
-                title={project.title}
-                width={100}
-                height={100}
-                className="absolute top-0 left-0 w-full h-full object-cover object-center rounded-md opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-              />
-            )}
-            <div className="absolute top-0 left-0 w-full h-full flex items-center justify-center bg-neutral-950/40 rounded-md opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-              <Icon icon="play" style="size-10 text-neutral-50" />
-            </div>
           </Link>
           <Link
             href={`/projects/${project.slug}`}

@@ -10,7 +10,6 @@ export type ProjectsProps = {
   slug: string;
   large_image: string;
   small_image: string;
-  gif: string | null;
   title: string;
   description: string;
   features: [

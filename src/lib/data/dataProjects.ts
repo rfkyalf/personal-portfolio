@@ -540,4 +540,62 @@ export const dataProjects = [
       },
     ],
   },
+  {
+    id: 6,
+    slug: 'movue',
+    title: 'MoVue - Discover, Watch, Enjoy.',
+    description:
+      'Movue is a prototype website for discovering and streaming movies and TV shows. Built with modern technologies, it provides a sleek, responsive design and an engaging user experience.',
+    features: [
+      {
+        id: 1,
+        emoji: '🎥',
+        title: 'Discover Movies',
+        description: 'Browse and search for the latest and popular movies.',
+      },
+      {
+        id: 2,
+        emoji: '📺',
+        title: 'Discover TV Shows',
+        description: 'Explore trending and top-rated TV series.',
+      },
+      {
+        id: 3,
+        emoji: '📖',
+        title: 'Detailed View',
+        description:
+          'Access in-depth details about movies and shows, including ratings and overviews.',
+      },
+      {
+        id: 4,
+        emoji: '📱',
+        title: 'Responsive Design',
+        description: 'Enjoy a seamless shopping experience on any device.',
+      },
+    ],
+    large_image: '/prj/movue.png',
+    small_image: '/prj/movue.png',
+    source_code: 'https://github.com/rfkyalf/movue.git',
+    demo: 'https://movie-tv-vue.vercel.app/',
+    project_name: 'movue',
+    run_project: 'npm run dev',
+    localhost: 'http://localhost:5173',
+    techs: [
+      {
+        id: 1,
+        name: 'Vue.js',
+        image: '/tech/vue.svg',
+      },
+      {
+        id: 2,
+        name: 'Tailwind CSS',
+        image: '/tech/tailwind.svg',
+      },
+      {
+        id: 3,
+        name: 'Typescript',
+        image: '/tech/ts.svg',
+      },
+    ],
+  },
 ];

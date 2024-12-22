@@ -36,41 +36,46 @@ export const dataSkills = [
   },
   {
     id: 8,
+    name: 'Vue.js',
+    image: '/tech/vue.svg',
+  },
+  {
+    id: 9,
     name: 'Next.js',
     image: '/tech/nextjs.svg',
   },
   {
-    id: 9,
+    id: 10,
     name: 'React Query',
     image: '/tech/react-query.svg',
   },
   {
-    id: 10,
+    id: 11,
     name: 'Zustand',
     image: '/tech/zustand.svg',
   },
   {
-    id: 11,
+    id: 12,
     name: 'Redux',
     image: '/tech/redux.svg',
   },
   {
-    id: 12,
+    id: 13,
     name: 'Framer Motion',
     image: '/tech/framer.svg',
   },
   {
-    id: 13,
+    id: 14,
     name: 'Prisma',
     image: '/tech/prisma.svg',
   },
   {
-    id: 14,
+    id: 15,
     name: 'Git',
     image: '/tech/git.svg',
   },
   {
-    id: 15,
+    id: 16,
     name: 'Figma',
     image: '/tech/figma.svg',
   },

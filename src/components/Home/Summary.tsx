@@ -1,12 +1,16 @@
-import { getSummary } from '@/lib/actions';
 import { MotionElement } from '@/lib/framer';
-import { SummaryProps } from '@/lib/types';
 import Link from 'next/link';
 
-export default async function Summary() {
-  const data = await getSummary();
-  const summary: SummaryProps = data.data;
+const SELF_DESC = {
+  name: 'Rifky Alfarez',
+  role: 'Frontend Developer',
+  summary:
+    'An enthusiastic and motivated Informatics Engineering graduate with a strong passion for web development. Skilled in developing websites using modern technologies such as Vue.js, React.js, and Next.js. Supported by hands-on experience from an internship as a Frontend Developer and various web development projects.',
+  cv_link:
+    'https://drive.google.com/file/d/1HE9rEIjQWAgj8eFe6aeFIAupgVw81J8b/view?usp=sharing',
+};
 
+export default function Summary() {
   return (
     <MotionElement
       as="section"
@@ -17,18 +21,18 @@ export default async function Summary() {
     >
       <div>
         <h1 className="text-[1.7rem] md:text-[1.8rem] lg:text-[1.9rem] font-bold text-neutral-950">
-          {summary?.name}
+          {SELF_DESC.name}
         </h1>
         <p className="text-[0.8rem] md:text-[0.9rem] lg:text-[1rem] text-neutral-500">
-          {summary?.role}
+          {SELF_DESC.role}
         </p>
       </div>
       <p className="text-[0.9rem] md:text-[1rem] lg:text-[1.1rem] text-neutral-800 text-pretty">
-        {summary?.summary}
+        {SELF_DESC.summary}
       </p>
       <Link
         className="w-fit text-[0.8rem] md:text-[0.9rem] lg:text-[1rem] text-neutral-800 hover:underline"
-        href={summary?.cv_link}
+        href={SELF_DESC.cv_link}
         data-disable-nprogress={true}
       >
         Download CV

@@ -1,14 +1,34 @@
 import { SectionTitle } from '@/components/SectionComps';
-import { getGetInTouch } from '@/lib/actions';
 import { MotionElement } from '@/lib/framer';
-import { GetInTouchProps } from '@/lib/types';
 import Link from 'next/link';
 import Icon from '../Icon';
 
-export default async function GetInTouch() {
-  const data = await getGetInTouch();
-  const getInTouch: GetInTouchProps = data.data;
+export const GET_IN_TOUCH = {
+  title: 'Get In Touch',
+  text: 'I am currently seeking job opportunities to gain more experience in the industry. Whether you have any questions or simply want to say hi, I will do my best to get back to you!',
+  socials: [
+    {
+      id: 1,
+      name: 'Linkedin',
+      link: 'https://www.linkedin.com/in/rifkyalfarez/',
+      icon: 'linkedin',
+    },
+    {
+      id: 2,
+      name: 'Github',
+      link: 'https://github.com/rfkyalf',
+      icon: 'github',
+    },
+    {
+      id: 3,
+      name: 'Instagram',
+      link: 'https://www.instagram.com/rfkyalf/',
+      icon: 'instagram',
+    },
+  ],
+};
 
+export default function GetInTouch() {
   return (
     <MotionElement
       as="section"
@@ -18,9 +38,9 @@ export default async function GetInTouch() {
       transition={{ duration: 0.5 }}
       className="py-[25px] md:py-[30px] lg:py-[35px] flex flex-col items-center"
     >
-      <SectionTitle title={getInTouch?.title} style="text-center" />
+      <SectionTitle title={GET_IN_TOUCH.title} style="text-center" />
       <p className="text-[0.9rem] md:text-[1rem] lg:text-[1.1rem] text-neutral-800 text-pretty text-center">
-        {getInTouch?.text}
+        {GET_IN_TOUCH.text}
       </p>
       <Link
         href={'mailto:alfarez2325@gmail.com'}
@@ -33,7 +53,7 @@ export default async function GetInTouch() {
         or find me on
       </p>
       <div className="flex items-center gap-x-2 mt-1">
-        {getInTouch?.socials.map((social) => {
+        {GET_IN_TOUCH.socials.map((social) => {
           return (
             <Link
               key={social.id}

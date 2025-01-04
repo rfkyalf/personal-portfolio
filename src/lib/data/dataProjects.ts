@@ -541,7 +541,7 @@ export const dataProjects = [
     ],
   },
   {
-    id: 6,
+    id: 7,
     slug: 'movue',
     title: 'MoVue - Discover, Watch, Enjoy.',
     description:

@@ -80,4 +80,15 @@ export const dataArticles = [
     created_at: '2024-12-17',
     url: 'https://dev.to/rifkyalfarez/reactjs-api-handling-b99',
   },
+  {
+    id: 9,
+    title:
+      'How to Fetch API and Implement Filtering, Sorting, and Pagination in Vue.js',
+    description:
+      'In this article, I want to share how you can fetch data from an API and implement useful features like filtering, sorting, and pagination in a Vue.js application.',
+    thumbnail: '/articles/article9.jpg',
+    author: 'Rifky Alfarez',
+    created_at: '2024-12-24',
+    url: 'https://dev.to/rifkyalfarez/how-to-fetch-api-and-implement-filtering-sorting-and-pagination-in-vuejs-1cpg',
+  },
 ];
